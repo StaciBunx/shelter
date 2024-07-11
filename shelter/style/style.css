@@ -21,6 +21,7 @@ li {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 .page {
@@ -51,14 +52,15 @@ img {
 }
 
 .center {
-    width: 1280px;
+    width: 1200px;
     margin: 0 auto;
 }
+
 
 /* Text Styles */
 
 .heading {
-    font-family: "Georgia", sans-serif;
+    font-family: "Georgia", "Times New Roman", "Times", serif;
     font-style: normal;
     color: #4c4c4c;
     font-weight: 400;
@@ -86,7 +88,7 @@ img {
 }
 
 .text {
-    font-family: "Arial", sans-serif;
+    font-family: "Arial", "Helvetica", sans-serif;
     color: #4c4c4c;
     font-weight: 400;
     font-size: 15px;
@@ -107,7 +109,7 @@ img {
     height: 52px;
     padding: 15px 45px;
     border-radius: 100px;
-    font-family: "Georgia", sans-serif;
+    font-family: "Georgia", "Times New Roman", "Times", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -130,4 +132,70 @@ img {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 60px;
+    padding-top: 30px;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 35px;
+    justify-content: flex-end;
+}
+
+.navigation__link {
+    color: #cdcdcd;
+}
+
+.navigation__link_current {
+    color: #fafafa;
+}
+
+/* Logo */
+.logo__title {
+    font-family: "Georgia", "Times New Roman", "Times", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.logo__title_light {
+    color: #f1cdb3;
+}
+
+.logo__subtitle {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.logo__subtitle_light {
+    color: #fff;
+}
+
+
+.logo__title_dark,
+.logo__subtitle_dark {
+    color: #545454;
+}
+
+
+/* Top */
+
+.top {
+    height: 818px;
+    position: relative;
+}
+
+.top__background {
+    position: absolute;
+    height: 908px;
+    width: 100%;
+    background-color: #211f20;
+    background-image: url("../assets/background/top-gradient-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -90px;
+    z-index: -10;
 }
