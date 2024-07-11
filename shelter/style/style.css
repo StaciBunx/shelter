@@ -55,6 +55,8 @@ img {
     margin: 0 auto;
 }
 
+/* Text Styles */
+
 .heading {
     font-family: "Georgia", sans-serif;
     font-style: normal;
@@ -96,6 +98,31 @@ img {
     font-size: 12px;
     line-height: 150%;
     color: #b2b2b2;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    height: 52px;
+    padding: 15px 45px;
+    border-radius: 100px;
+    font-family: "Georgia", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.button_dark {
+    background-color: #f1cdb3;
+}
+
+.button_light {
+    background-color: #fff;
+    border: 2px solid #f1cdb3;
 }
 
 /* Header */
