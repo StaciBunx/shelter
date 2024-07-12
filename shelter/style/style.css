@@ -358,7 +358,6 @@ img {
     margin-bottom: 30px;
 }
 
-
 .help__item_food::before {
     background-image: url("../assets/icons/icon-pet-food.svg");
 }
@@ -393,4 +392,55 @@ img {
 
 .help__item_sleeping::before {
     background-image: url("../assets/icons/icon-sleeping-area.svg");
+}
+
+/* Donation */
+
+.donation {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.donation-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.donation__image {
+    width: 505px;
+    height: 261px;
+    background-image: url(../assets/background/donation-dog.png);
+    margin-left: 143px;
+    margin-top: 11px;
+}
+
+.donation__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 380px;
+}
+
+.donation__banking {
+    display: block;
+    border-radius: 9px;
+    padding: 10px 15px;
+    width: 350px;
+    height: 43px;
+    background-color: #f1cdb3;
+}
+
+.donation__credit-card {
+    display: flex;
+    align-items: center;
+}
+
+.donation__credit-card::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/donation-credit-card.svg);
+    width: 30px;
+    height: 23px;
+    margin-right: 15px;
 }
