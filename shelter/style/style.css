@@ -361,7 +361,8 @@ address::before {
 
 /* Pets */
 
-.pets {
+.pets,
+.pets-catalog {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,6 +390,15 @@ address::before {
 .pets__image {
     background-color: #fff;
     border-radius: 9px 9px 0 0;
+}
+
+/* Pets Catalog */
+
+.pets__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    row-gap: 30px;
 }
 
 /* Carousel */
