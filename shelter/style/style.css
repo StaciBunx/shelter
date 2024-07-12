@@ -127,28 +127,6 @@ img {
     border: 2px solid #f1cdb3;
 }
 
-/* Header */
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    padding-top: 30px;
-}
-
-.navigation__list {
-    display: flex;
-    gap: 35px;
-    justify-content: flex-end;
-}
-
-.navigation__link {
-    color: #cdcdcd;
-}
-
-.navigation__link_current {
-    color: #fafafa;
-}
 
 /* Logo */
 .logo__title {
@@ -180,6 +158,125 @@ img {
     color: #545454;
 }
 
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-top: 30px;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 35px;
+    justify-content: flex-end;
+}
+
+.navigation__link {
+    color: #cdcdcd;
+}
+
+.navigation__link_current {
+    color: #fafafa;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #211f20;
+    background-image: url("../assets/background/gradient-background.jpg");
+    background-repeat: no-repeat;
+    /* min-height: 350px; */
+    /* padding-top: 56px;
+    padding-bottom: 60px; */
+    position: relative;
+
+}
+
+.footer-wrapper {
+    display: flex;
+    gap: 160px;
+    min-height: 350px;
+    align-items: flex-end;
+}
+
+.footer__contacts {
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    padding-bottom: 60px;
+}
+
+.footer__address {
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    padding-bottom: 60px;
+}
+
+.footer__heading {
+    color: #fff;
+}
+
+.footer__text {
+    color: #f1cdb3;
+}
+
+.footer__image {
+    width: 300px;
+    height: 310px;
+    background-image: url("../assets/background/footer-puppy.png");
+}
+
+a[href="mailto:email@shelter.com"],
+a[href="tel:+136745677554"] {
+    display: flex;
+}
+
+a[href="mailto:email@shelter.com"]::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 32px;
+    margin-right: 20px;
+    background-image: url("../assets/icons/icon-email.svg");
+}
+
+a[href="tel:+136745677554"]::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 32px;
+    margin-right: 20px;
+    background-image: url("../assets/icons/icon-phone.svg");
+}
+
+address {
+    position: relative;
+    padding-left: 40px;
+}
+
+address::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 32px;
+    left: 0;
+    /* top: calc((100%-32px)/2); */
+    background-image: url("../assets/icons/icon-marker.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__address address:first-of-type::before {
+    top: 6px;
+}
 
 /* Top */
 
@@ -193,7 +290,7 @@ img {
     height: 908px;
     width: 100%;
     background-color: #211f20;
-    background-image: url("../assets/background/top-gradient-background.jpg");
+    background-image: url("../assets/background/gradient-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     top: -90px;
