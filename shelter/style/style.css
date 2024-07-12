@@ -199,3 +199,31 @@ img {
     top: -90px;
     z-index: -10;
 }
+
+.top-wrapper {
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    gap: 42px;
+    padding-top: 90px;
+}
+
+.top-content {
+    padding-top: 163px;
+}
+
+.top__image {
+    width: 698px;
+    height: 728px;
+    background-image: url(../assets/background/top-puppy.png);
+}
+
+.top__heading {
+    color: #fff;
+    width: 310px;
+    margin-bottom: 42px;
+}
+
+.top__text {
+    color: #cdcdcd;
+    margin-bottom: 42px;
+}
