@@ -233,12 +233,34 @@ img {
     justify-content: flex-end;
 }
 
-.navigation__link {
+.navigation__link_normal {
     color: #cdcdcd;
 }
 
 .navigation__link_current {
     color: #fafafa;
+}
+
+.navigation__link_current_dark,
+.navigation__link_normal_dark {
+    color: #545454;
+}
+
+.navigation__link_current::after,
+.navigation__link_current_dark::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #f1cdb3;
+}
+
+.navigation__link_normal:hover {
+    color: #fafafa;
+}
+
+.navigation__link_normal_dark:hover {
+    color: #292929;
 }
 
 /* Footer */
