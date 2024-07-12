@@ -401,6 +401,39 @@ address::before {
     row-gap: 30px;
 }
 
+.pets__pagination {
+    padding-top: 45px;
+}
+
+.pagination__list {
+    display: flex;
+    gap: 20px;
+}
+
+.pagination__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pagination__item_disabled {
+    border-color: #cdcdcd;
+    cursor: default;
+}
+
+.pagination__item_disabled path {
+    fill: #CDCDCD;
+}
+
+.pagination__item_current {
+    background-color: #f1cdb3;
+}
+
 /* Carousel */
 
 .carousel {
