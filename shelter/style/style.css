@@ -134,6 +134,30 @@ img {
     border-color: #fddcc4;
 }
 
+.button_small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button_small_disabled {
+    border-color: #cdcdcd;
+    cursor: default;
+}
+
+.button_small_disabled path {
+    fill: #CDCDCD;
+}
+
+.button_small_current {
+    background-color: #f1cdb3;
+}
+
 /* Logo */
 
 .logo__title {
@@ -203,9 +227,6 @@ img {
     background-color: #211f20;
     background-image: url("../assets/background/gradient-background.jpg");
     background-repeat: no-repeat;
-    /* min-height: 350px; */
-    /* padding-top: 56px;
-    padding-bottom: 60px; */
     position: relative;
 
 }
@@ -418,30 +439,6 @@ address::before {
 .pagination__list {
     display: flex;
     gap: 20px;
-}
-
-.pagination__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border: 2px solid #f1cdb3;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.pagination__item_disabled {
-    border-color: #cdcdcd;
-    cursor: default;
-}
-
-.pagination__item_disabled path {
-    fill: #CDCDCD;
-}
-
-.pagination__item_current {
-    background-color: #f1cdb3;
 }
 
 /* Carousel */
