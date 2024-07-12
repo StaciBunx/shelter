@@ -335,7 +335,6 @@ address::before {
 /* About */
 
 .about {
-    height: 588px;
     background-color: #fff;
     padding-top: 80px;
     padding-bottom: 100px;
@@ -355,9 +354,13 @@ address::before {
 }
 
 .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     width: 430px;
     padding-top: 14px;
 }
+
 
 /* Pets */
 
