@@ -134,6 +134,11 @@ img {
     border-color: #fddcc4;
 }
 
+.button:active {
+    background-color: #f1cdb3;
+    border-color: #f1cdb3;
+}
+
 .button_small {
     display: flex;
     align-items: center;
@@ -156,6 +161,21 @@ img {
 
 .button_small_current {
     background-color: #f1cdb3;
+}
+
+.button_small:not(.button_small_disabled):hover {
+    background-color: #fddcc4;
+    border-color: #fddcc4;
+}
+
+.button_small:active {
+    background-color: #f1cdb3;
+}
+
+.button_small:disabled {
+    background-color: transparent;
+    border-color: #CDCDCD;
+    color: #CDCDCD;
 }
 
 /* Logo */
@@ -461,14 +481,6 @@ address::before {
 }
 
 .carousel__control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border: 2px solid #f1cdb3;
-    border-radius: 50%;
-    cursor: pointer;
     position: absolute;
     top: 192px;
 }
