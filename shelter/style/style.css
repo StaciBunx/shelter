@@ -116,6 +116,8 @@ img {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    border: 2px solid transparent;
+
 }
 
 .button_dark {
@@ -124,7 +126,12 @@ img {
 
 .button_light {
     background-color: #fff;
-    border: 2px solid #f1cdb3;
+    border-color: #f1cdb3;
+}
+
+.button:hover {
+    background-color: #fddcc4;
+    border-color: #fddcc4;
 }
 
 /* Logo */
@@ -456,15 +463,24 @@ address::before {
     margin-top: 60px;
 }
 
-.carousel__controls_left {
+.carousel__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+    cursor: pointer;
     position: absolute;
     top: 192px;
+}
+
+.carousel__control_left {
     left: -105px;
 }
 
-.carousel__controls_right {
-    position: absolute;
-    top: 192px;
+.carousel__control_right {
     right: -105px;
 }
 
