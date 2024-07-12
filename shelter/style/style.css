@@ -127,8 +127,8 @@ img {
     border: 2px solid #f1cdb3;
 }
 
-
 /* Logo */
+
 .logo__title {
     font-family: "Georgia", "Times New Roman", "Times", serif;
     font-weight: 400;
@@ -161,10 +161,19 @@ img {
 /* Header */
 
 .header {
+    height: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header_color_white {
+    background-color: #fff;
+}
+
+.header-wrapper {
     display: flex;
     justify-content: space-between;
-    height: 60px;
-    padding-top: 30px;
+    align-items: center;
 }
 
 .navigation__list {
