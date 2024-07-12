@@ -11,17 +11,19 @@
 <body class="page__body">
     <header class="header center">
         <div class="logo">
-            <p class="logo__title logo__title_light">Cozy House</p>
-            <p class="logo__subtitle logo__subtitle_light">Shelter for pets in Boston</p>
+            <a href="#">
+                <p class="logo__title logo__title_light">Cozy House</p>
+                <p class="logo__subtitle logo__subtitle_light">Shelter for pets in Boston</p>
+            </a>
         </div>
         <nav class="header__navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a class="text navigation__link text navigation__link_active"
-                        href="#">About the shelter</a></li>
+                        href="#about">About the shelter</a></li>
                 <li class="navigation__item"><a class="text navigation__link " href="./catalog.html">Our pets</a>
                 </li>
-                <li class="navigation__item"><a class="text navigation__link " href="#">Help the shelter</a></li>
-                <li class="navigation__item"><a class="text navigation__link " href="#">Contacts</a></li>
+                <li class="navigation__item"><a class="text navigation__link " href="#help">Help the shelter</a></li>
+                <li class="navigation__item"><a class="text navigation__link " href="#footer">Contacts</a></li>
             </ul>
         </nav>
     </header>
@@ -37,14 +39,14 @@
                         and
                         open
                         heart. He or she will love you more than anybody else in the world, you will see!</p>
-                    <a class="button button_dark" href="#">Make a friend</a>
+                    <a class="button button_dark" href="#about">Make a friend</a>
                 </div>
                 <div class="top__image">
                 </div>
             </div>
             <div class="top__background"></div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about-wrapper center">
                 <div class="about__image"></div>
                 <div class="about-content">
@@ -105,11 +107,11 @@
                         <path d="M19 27V25H30V23L33 26L30 29V27H19Z" fill="#292929" />
                     </svg>
                 </div>
-                <a class="button button_dark carousel__button" href="">Get to know the rest</a>
+                <a class="button button_dark carousel__button" href="./catalog.html">Get to know the rest</a>
 
             </div>
         </section>
-        <section class="help">
+        <section class="help" id="help">
             <div class="help-wrapper center">
                 <h2 class="heading heading_M help__heading">How you can help<br>
                     our shelter</h2>
@@ -132,9 +134,9 @@
                 <div class="donation__content">
                     <h2 class="heading heading_M donation__heading">You can also<br> make a donation</h2>
                     <h5 class="heading heading_XS">Name of the bank / Type of bank account</h5>
-                    <p class="donation__banking">
+                    <a href="#" class="donation__banking">
                         <span class="heading heading_S donation__credit-card">8380 2880 8028 8791 7435</span>
-                    </p>
+                    </a>
                     <p class="text text_legal">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.
                         Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et
@@ -143,7 +145,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-wrapper center">
             <div class="footer__contacts">
                 <h3 class="heading heading_M footer__heading">For questions and suggestions

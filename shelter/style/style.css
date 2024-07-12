@@ -268,7 +268,6 @@ address::before {
     width: 20px;
     height: 32px;
     left: 0;
-    /* top: calc((100%-32px)/2); */
     background-image: url("../assets/icons/icon-marker.svg");
     background-repeat: no-repeat;
     background-size: contain;
