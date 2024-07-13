@@ -1,3 +1,45 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Arial';
+    src: local('Arial Italic'), local('Arial-ItalicMT'),
+        url('Arial-ItalicMT.woff2') format('woff2'),
+        url('Arial-ItalicMT.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: local('Arial'), local('ArialMT'),
+        url('ArialMT.woff2') format('woff2'),
+        url('ArialMT.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: local('Georgia Bold'), local('Georgia-Bold'),
+        url('Georgia-Bold.woff2') format('woff2'),
+        url('Georgia-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: local('Georgia'),
+        url('Georgia.woff2') format('woff2'),
+        url('Georgia.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Common */
 
 * {
