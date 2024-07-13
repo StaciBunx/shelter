@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozy home</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="./javascript/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -44,7 +52,7 @@
                         and
                         open
                         heart. He or she will love you more than anybody else in the world, you will see!</p>
-                    <a class="button button_dark" href="#about">Make a friend</a>
+                    <a class="button button_dark" href="#pets">Make a friend</a>
                 </div>
                 <div class="top__image">
                 </div>
@@ -75,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <section class="pets center">
+        <section class="pets center" id="pets">
             <h3 class="heading heading_M pets__heading">Our friends who
                 are looking for a house</h3>
             <div class="carousel">
@@ -100,19 +108,19 @@
                     </article>
                 </div>
                 <div class="carousel__controls">
-                    <li class="carousel__control button_small carousel__control_left">
+                    <div class="carousel__control button_small carousel__control_left">
                         <svg aria-hidden="true" focusable="false" width="14" height="6" viewBox="0 0 14 6" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
                         </svg>
-                    </li>
+                    </div>
 
-                    <li class="carousel__control button_small carousel__control_right">
+                    <div class="carousel__control button_small carousel__control_right">
                         <svg aria-hidden="true" focusable="false" width="14" height="6" viewBox="0 0 14 6" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
                         </svg>
-                    </li>
+                    </div>
                 </div>
                 <a class="button button_dark carousel__button" href="./catalog.html">Get to know the rest</a>
 
