@@ -503,6 +503,11 @@ address::before {
     background-color: #fff;
 }
 
+.pets__card:hover {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+
+}
+
 .pets__image {
     background-color: #fff;
     border-radius: 9px 9px 0 0;
