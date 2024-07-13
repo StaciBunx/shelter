@@ -501,6 +501,7 @@ address::before {
     height: 435px;
     border-radius: 9px;
     background-color: #fff;
+    transition: all 0.3s linear;
 }
 
 .pets__card:hover {
