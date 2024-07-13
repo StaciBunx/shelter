@@ -501,7 +501,7 @@ address::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
     width: 270px;
     height: 435px;
     border-radius: 9px;
@@ -572,13 +572,18 @@ address::before {
 /* Help */
 
 .help {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 80px;
     padding-bottom: 100px;
     height: 611px;
     background-color: #fff;
+}
+
+.help-wrapper {
+    width: 1026px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .help__heading {
@@ -587,18 +592,19 @@ address::before {
 }
 
 .help__list {
+    width: 1026px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    gap: 120px;
 }
 
 .help__item {
     display: flex;
-    width: 240px;
+    /* width: 205px; */
     flex-direction: column;
     align-items: center;
-    margin-bottom: 55px;
+    /* margin-bottom: 55px; */
 }
 
 .help__item::before {
@@ -606,7 +612,7 @@ address::before {
     display: block;
     height: 60px;
     width: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .help__item_food::before {
