@@ -579,7 +579,7 @@ address::before {
 }
 
 .help-wrapper {
-    width: 1026px;
+    /* width: 1026px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -596,15 +596,14 @@ address::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 120px;
+    column-gap: 119px;
+    row-gap: 55px;
 }
 
 .help__item {
     display: flex;
-    /* width: 205px; */
     flex-direction: column;
     align-items: center;
-    /* margin-bottom: 55px; */
 }
 
 .help__item::before {
