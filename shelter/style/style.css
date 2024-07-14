@@ -340,9 +340,10 @@ img {
 
 .footer__address {
     height: 294px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: space-between; */
+    /* gap: 30px; */
     width: 300px;
     padding-bottom: 60px;
 }
@@ -352,7 +353,37 @@ img {
 }
 
 .footer__text {
+    line-height: 120%;
     color: #f1cdb3;
+}
+
+.footer__address .footer__heading {
+    margin-bottom: 30px;
+}
+
+.footer__address address:first-of-type {
+    margin-bottom: 35px;
+}
+
+.footer__address address {
+    position: relative;
+    padding-left: 40px;
+}
+
+.footer__address address::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 32px;
+    left: 0;
+    background-image: url("../assets/icons/icon-marker.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__address address:first-of-type::before {
+    top: 6px;
 }
 
 .footer__image {
@@ -382,27 +413,6 @@ a[href="tel:+136745677554"]::before {
     height: 32px;
     margin-right: 20px;
     background-image: url("../assets/icons/icon-phone.svg");
-}
-
-address {
-    position: relative;
-    padding-left: 40px;
-}
-
-address::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 32px;
-    left: 0;
-    background-image: url("../assets/icons/icon-marker.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.footer__address address:first-of-type::before {
-    top: 6px;
 }
 
 /* Top */
