@@ -221,6 +221,11 @@ img {
 }
 
 /* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .logo__title {
     font-family: "Georgia", "Times New Roman", "Times", serif;
@@ -228,6 +233,7 @@ img {
     font-size: 32px;
     line-height: 110%;
     letter-spacing: 0.06em;
+    margin-bottom: 10px;
 }
 
 .logo__title_light {
@@ -334,9 +340,10 @@ img {
 
 .footer__address {
     height: 294px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: space-between; */
+    /* gap: 30px; */
     width: 300px;
     padding-bottom: 60px;
 }
@@ -346,7 +353,37 @@ img {
 }
 
 .footer__text {
+    line-height: 120%;
     color: #f1cdb3;
+}
+
+.footer__address .footer__heading {
+    margin-bottom: 30px;
+}
+
+.footer__address address:first-of-type {
+    margin-bottom: 35px;
+}
+
+.footer__address address {
+    position: relative;
+    padding-left: 40px;
+}
+
+.footer__address address::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 32px;
+    left: 0;
+    background-image: url("../assets/icons/icon-marker.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__address address:first-of-type::before {
+    top: 6px;
 }
 
 .footer__image {
@@ -376,27 +413,6 @@ a[href="tel:+136745677554"]::before {
     height: 32px;
     margin-right: 20px;
     background-image: url("../assets/icons/icon-phone.svg");
-}
-
-address {
-    position: relative;
-    padding-left: 40px;
-}
-
-address::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 32px;
-    left: 0;
-    background-image: url("../assets/icons/icon-marker.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.footer__address address:first-of-type::before {
-    top: 6px;
 }
 
 /* Top */
@@ -487,7 +503,6 @@ address::before {
 }
 
 .pets__heading {
-    width: 400px;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -496,7 +511,7 @@ address::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
     width: 270px;
     height: 435px;
     border-radius: 9px;
@@ -524,7 +539,7 @@ address::before {
 }
 
 .pets__pagination {
-    padding-top: 45px;
+    padding-top: 60px;
 }
 
 .pagination__list {
@@ -567,13 +582,18 @@ address::before {
 /* Help */
 
 .help {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-top: 80px;
     padding-bottom: 100px;
     height: 611px;
     background-color: #fff;
+}
+
+.help-wrapper {
+    /* width: 1026px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .help__heading {
@@ -582,18 +602,18 @@ address::before {
 }
 
 .help__list {
+    width: 1026px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    column-gap: 119px;
+    row-gap: 55px;
 }
 
 .help__item {
     display: flex;
-    width: 240px;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 55px;
 }
 
 .help__item::before {
@@ -601,7 +621,7 @@ address::before {
     display: block;
     height: 60px;
     width: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .help__item_food::before {
