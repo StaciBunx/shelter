@@ -324,6 +324,7 @@ img {
 
 .footer-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 160px;
     min-height: 350px;
     align-items: flex-end;
@@ -716,7 +717,11 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+
     .center {
         width: 708px;
     }
+
+    .footer-wrapper {}
+
 }
