@@ -722,6 +722,11 @@ a[href="tel:+136745677554"]::before {
         width: 708px;
     }
 
-    .footer-wrapper {}
+    .footer-wrapper {
+        padding-top: 30px;
+        column-gap: 60px;
+        row-gap: 65px;
+        justify-content: center;
+    }
 
 }
