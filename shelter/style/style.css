@@ -521,7 +521,11 @@ a[href="tel:+136745677554"]::before {
 
 .pets__card:hover {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
 
+.pets__card:hover .button {
+    background-color: #fddcc4;
+    border-color: #fddcc4;
 }
 
 .pets__image {
