@@ -588,7 +588,7 @@ a[href="tel:+136745677554"]::before {
 .help {
     padding-top: 80px;
     padding-bottom: 100px;
-    height: 611px;
+    min-height: 611px;
     background-color: #fff;
 }
 
@@ -778,5 +778,17 @@ a[href="tel:+136745677554"]::before {
 
     .carousel__control_right {
         right: -64px;
+    }
+
+    .help {}
+
+    .help__list {
+        width: 630px;
+        column-gap: 60px;
+    }
+
+    .help__item {
+        width: 170px;
+
     }
 }
