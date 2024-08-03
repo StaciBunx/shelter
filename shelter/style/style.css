@@ -453,7 +453,6 @@ a[href="tel:+136745677554"]::before {
 
 .top__heading {
     color: #fff;
-    width: 310px;
     margin-bottom: 42px;
 }
 
@@ -722,11 +721,34 @@ a[href="tel:+136745677554"]::before {
         width: 708px;
     }
 
+    .top-wrapper {
+        grid-template-columns: none;
+        justify-items: center;
+
+    }
+
+    .top__background {
+        height: 1165px;
+    }
+
+    .top-content {
+        padding-top: 0;
+        width: 460px;
+    }
+
+    .top__image {
+        height: 569px;
+        width: 593px;
+        background-size: cover;
+
+    }
+
     .footer-wrapper {
         padding-top: 30px;
         column-gap: 60px;
         row-gap: 65px;
         justify-content: center;
     }
+
 
 }
