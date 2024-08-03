@@ -750,7 +750,7 @@ a[href="tel:+136745677554"]::before {
     .footer-wrapper {
         padding-top: 30px;
         column-gap: 60px;
-        row-gap: 65px;
+        row-gap: 0;
         justify-content: center;
     }
 
