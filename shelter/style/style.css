@@ -724,6 +724,8 @@ a[href="tel:+136745677554"]::before {
     .top-wrapper {
         grid-template-columns: none;
         justify-items: center;
+        gap: 100px;
+        padding-top: 30px;
     }
 
     .top__background {
