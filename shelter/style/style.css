@@ -674,6 +674,7 @@ a[href="tel:+136745677554"]::before {
 .donation-wrapper {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .donation__image {
@@ -791,6 +792,14 @@ a[href="tel:+136745677554"]::before {
 
     .help__item {
         width: 170px;
+    }
 
+    .donation-wrapper {
+        justify-content: center;
+    }
+
+    .donation__image {
+        order: 1;
+        margin-left: 0;
     }
 }
