@@ -470,8 +470,8 @@ a[href="tel:+136745677554"]::before {
 }
 
 .about-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .about__image {
@@ -753,5 +753,14 @@ a[href="tel:+136745677554"]::before {
 
     .top-content__button {
         justify-self: center;
+    }
+
+    .about-wrapper {
+        justify-content: center;
+    }
+
+    .about__image {
+        margin-top: 80px;
+        order: 1;
     }
 }
