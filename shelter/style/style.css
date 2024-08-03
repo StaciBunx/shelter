@@ -763,4 +763,20 @@ a[href="tel:+136745677554"]::before {
         margin-top: 80px;
         order: 1;
     }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+    .carousel__control_left {
+        left: -64px;
+    }
+
+    .carousel__control_right {
+        right: -64px;
+    }
 }
