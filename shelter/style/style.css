@@ -724,7 +724,6 @@ a[href="tel:+136745677554"]::before {
     .top-wrapper {
         grid-template-columns: none;
         justify-items: center;
-
     }
 
     .top__background {
@@ -732,6 +731,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top-content {
+        display: grid;
         padding-top: 0;
         width: 460px;
     }
@@ -740,7 +740,6 @@ a[href="tel:+136745677554"]::before {
         height: 569px;
         width: 593px;
         background-size: cover;
-
     }
 
     .footer-wrapper {
@@ -750,5 +749,7 @@ a[href="tel:+136745677554"]::before {
         justify-content: center;
     }
 
-
+    .top-content__button {
+        justify-self: center;
+    }
 }
