@@ -672,8 +672,7 @@ a[href="tel:+136745677554"]::before {
 }
 
 .donation-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 30px;
 }
 
@@ -681,8 +680,11 @@ a[href="tel:+136745677554"]::before {
     width: 505px;
     height: 261px;
     background-image: url(../assets/background/donation-dog.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-left: 143px;
     margin-top: 11px;
+
 }
 
 .donation__content {
