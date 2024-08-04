@@ -761,6 +761,10 @@ a[href="tel:+136745677554"]::before {
         justify-self: center;
     }
 
+    .about {
+        padding-top: 65px;
+    }
+
     .about-wrapper {
         justify-content: center;
     }
@@ -768,6 +772,7 @@ a[href="tel:+136745677554"]::before {
     .about__image {
         margin-top: 80px;
         order: 1;
+        margin-left: 124px;
     }
 
     .carousel__cards {
