@@ -802,6 +802,10 @@ a[href="tel:+136745677554"]::before {
         width: 170px;
     }
 
+    .donation {
+        padding-top: 78px;
+    }
+
     .donation-wrapper {
         justify-content: center;
     }
@@ -809,5 +813,10 @@ a[href="tel:+136745677554"]::before {
     .donation__image {
         order: 1;
         margin-left: 0;
+        margin-top: 29px;
+    }
+
+    .donation__banking {
+        padding-top: 8px;
     }
 }
