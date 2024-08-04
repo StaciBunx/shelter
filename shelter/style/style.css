@@ -449,6 +449,8 @@ a[href="tel:+136745677554"]::before {
     width: 698px;
     height: 728px;
     background-image: url(../assets/background/top-puppy.png);
+    background-repeat: no-repeat;
+
 }
 
 .top__heading {
@@ -727,7 +729,7 @@ a[href="tel:+136745677554"]::before {
     .top-wrapper {
         grid-template-columns: none;
         justify-items: center;
-        gap: 100px;
+        row-gap: 100px;
         padding-top: 30px;
     }
 
@@ -742,9 +744,10 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top__image {
-        height: 569px;
-        width: 593px;
+        height: 593px;
+        width: 569px;
         background-size: cover;
+        justify-self: end;
     }
 
     .footer-wrapper {
