@@ -1049,4 +1049,20 @@ a[href="tel:+136745677554"]::before {
     .pets-catalog {
         padding: 42px 0;
     }
+
+    .pets__cards .pets__card:nth-child(4),
+    .pets__cards .pets__card:nth-child(5),
+    .pets__cards .pets__card:nth-child(6),
+    .pets__cards .pets__card:nth-child(7),
+    .pets__cards .pets__card:nth-child(8) {
+        display: none;
+    }
+
+    .pets__pagination {
+        padding-top: 42px;
+    }
+
+    .pagination__list {
+        gap: 10px;
+    }
 }
