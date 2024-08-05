@@ -870,8 +870,13 @@ a[href="tel:+136745677554"]::before {
         text-align: center;
     }
 
-    .heading_L {
+    .heading_L,
+    .heading_M {
         font-size: 25px;
+    }
+
+    .header-wrapper {
+        padding: 0 10px;
     }
 
     .navigation__burger {
@@ -885,7 +890,7 @@ a[href="tel:+136745677554"]::before {
     .top-wrapper {
         grid-template-columns: none;
         justify-items: center;
-        row-gap: 100px;
+        row-gap: 105px;
         padding-top: 30px;
     }
 
@@ -901,9 +906,32 @@ a[href="tel:+136745677554"]::before {
         height: 271px;
         background-size: cover;
         justify-self: end;
+        background-repeat: no-repeat;
     }
 
     .top__text {
         text-align: center;
+    }
+
+    .about {
+        padding: 42px 10px;
+    }
+
+    .about-wrapper {
+        justify-content: center;
+        gap: 42px;
+    }
+
+    .about__image {
+        order: 1;
+        width: 260px;
+        height: 353px;
+        margin: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .about__text {
+        text-align: justify;
     }
 }
