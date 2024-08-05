@@ -875,6 +875,10 @@ a[href="tel:+136745677554"]::before {
         font-size: 25px;
     }
 
+    .heading_S {
+        font-size: 15px;
+    }
+
     .header-wrapper {
         padding: 0 10px;
     }
@@ -967,5 +971,23 @@ a[href="tel:+136745677554"]::before {
 
     .carousel__control_right {
         right: 43px;
+    }
+
+    .help {
+        padding: 42px 0;
+    }
+
+    .help__heading {
+        margin-bottom: 42px;
+    }
+
+    .help__list {
+        width: 290px;
+        column-gap: 30px;
+        justify-content: flex-start;
+    }
+
+    .help__item {
+        width: 130px;
     }
 }
