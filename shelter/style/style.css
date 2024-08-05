@@ -750,6 +750,11 @@ a[href="tel:+136745677554"]::before {
         width: 460px;
     }
 
+
+    .top-content__button {
+        justify-self: center;
+    }
+
     .top__image {
         height: 593px;
         width: 569px;
@@ -781,10 +786,6 @@ a[href="tel:+136745677554"]::before {
 
     a[href="tel:+136745677554"]::before {
         margin-top: -3px;
-    }
-
-    .top-content__button {
-        justify-self: center;
     }
 
     .about {
@@ -862,7 +863,15 @@ a[href="tel:+136745677554"]::before {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .center {
-        width: 280px;
+        width: 300px;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .heading_L {
+        font-size: 25px;
     }
 
     .navigation__burger {
@@ -871,5 +880,30 @@ a[href="tel:+136745677554"]::before {
 
     .navigation__list {
         display: none;
+    }
+
+    .top-wrapper {
+        grid-template-columns: none;
+        justify-items: center;
+        row-gap: 100px;
+        padding-top: 30px;
+    }
+
+    .top-content {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top__image {
+        width: 260px;
+        height: 271px;
+        background-size: cover;
+        justify-self: end;
+    }
+
+    .top__text {
+        text-align: center;
     }
 }
