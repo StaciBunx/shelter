@@ -683,21 +683,21 @@ a[href="tel:+136745677554"]::before {
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 143px;
-    margin-top: 11px;
+    margin-top: 8px;
 
 }
 
 .donation__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 19px;
     width: 380px;
 }
 
 .donation__banking {
     display: block;
     border-radius: 9px;
-    padding: 10px 15px;
+    padding: 8px 15px;
     width: 350px;
     height: 43px;
     background-color: #f1cdb3;
@@ -822,7 +822,4 @@ a[href="tel:+136745677554"]::before {
         margin-top: 29px;
     }
 
-    .donation__banking {
-        padding-top: 8px;
-    }
 }
