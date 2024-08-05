@@ -274,6 +274,10 @@ img {
     align-items: center;
 }
 
+.navigation__burger {
+    display: none;
+}
+
 .navigation__list {
     display: flex;
     gap: 35px;
@@ -859,5 +863,13 @@ a[href="tel:+136745677554"]::before {
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .center {
         width: 280px;
+    }
+
+    .navigation__burger {
+        display: block;
+    }
+
+    .navigation__list {
+        display: none;
     }
 }
