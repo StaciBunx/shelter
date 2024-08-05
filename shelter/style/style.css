@@ -540,8 +540,9 @@ a[href="tel:+136745677554"]::before {
 /* Pets Catalog */
 
 .pets__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    grid-auto-flow: dense;
     column-gap: 40px;
     row-gap: 30px;
 }
@@ -835,5 +836,6 @@ a[href="tel:+136745677554"]::before {
         margin-left: 0;
         margin-top: 32px;
     }
+
 
 }
