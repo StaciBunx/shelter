@@ -338,7 +338,6 @@ img {
     height: 294px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     width: 280px;
     padding-bottom: 60px;
     gap: 42px;
@@ -348,8 +347,6 @@ img {
     height: 294px;
     width: 300px;
     padding-bottom: 60px;
-    /* gap: 33px; */
-
 }
 
 .footer__heading {
@@ -875,10 +872,6 @@ a[href="tel:+136745677554"]::before {
         font-size: 25px;
     }
 
-    .heading_S {
-        font-size: 15px;
-    }
-
     .heading_XS {
         letter-spacing: 0;
     }
@@ -990,6 +983,10 @@ a[href="tel:+136745677554"]::before {
         justify-content: flex-start;
     }
 
+    .help__list .heading_S {
+        font-size: 15px;
+    }
+
     .help__item {
         width: 130px;
     }
@@ -1006,6 +1003,10 @@ a[href="tel:+136745677554"]::before {
         align-items: center;
     }
 
+    .donation .heading_S {
+        font-size: 15px;
+    }
+
     .donation__image {
         order: 1;
         margin: 0;
@@ -1020,5 +1021,28 @@ a[href="tel:+136745677554"]::before {
 
     .text_legal {
         text-align: justify;
+    }
+
+    .footer {
+        padding-top: 30px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .footer__contacts {
+        padding: 0;
+        gap: 40px;
+        width: 278px;
+        height: 208px;
+    }
+
+    .footer__address {
+        padding: 0;
+        width: 300px;
+        height: 222px;
     }
 }
