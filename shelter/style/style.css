@@ -334,17 +334,14 @@ img {
     height: 294px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 280px;
     padding-bottom: 60px;
+    gap: 40px;
 }
 
 .footer__address {
     height: 294px;
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: space-between; */
-    /* gap: 30px; */
     width: 300px;
     padding-bottom: 60px;
 }
@@ -479,7 +476,7 @@ a[href="tel:+136745677554"]::before {
 .about__image {
     width: 300px;
     height: 408px;
-    margin-right: 125px;
+    margin-right: 120px;
     margin-left: 175px;
     background-image: url(../assets/background/about-pets.png);
 }
@@ -755,6 +752,15 @@ a[href="tel:+136745677554"]::before {
         column-gap: 60px;
         row-gap: 0;
         justify-content: center;
+    }
+
+    /* .footer__contacts,
+    .footer__address {
+        padding-bottom: 65px;
+    } */
+
+    .footer__image {
+        padding-top: 10px;
     }
 
     .top-content__button {
