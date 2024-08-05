@@ -324,6 +324,7 @@ img {
 
 .footer-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 160px;
     min-height: 350px;
     align-items: flex-end;
@@ -333,19 +334,18 @@ img {
     height: 294px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 280px;
     padding-bottom: 60px;
+    gap: 42px;
 }
 
 .footer__address {
     height: 294px;
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: space-between; */
-    /* gap: 30px; */
     width: 300px;
     padding-bottom: 60px;
+    /* gap: 33px; */
+
 }
 
 .footer__heading {
@@ -353,16 +353,16 @@ img {
 }
 
 .footer__text {
-    line-height: 120%;
+    line-height: 117%;
     color: #f1cdb3;
 }
 
 .footer__address .footer__heading {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 }
 
 .footer__address address:first-of-type {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
 }
 
 .footer__address address {
@@ -376,14 +376,15 @@ img {
     display: block;
     width: 20px;
     height: 32px;
-    left: 0;
+    left: -1px;
+    top: -3px;
     background-image: url("../assets/icons/icon-marker.svg");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .footer__address address:first-of-type::before {
-    top: 6px;
+    top: 7px;
 }
 
 .footer__image {
@@ -403,6 +404,7 @@ a[href="mailto:email@shelter.com"]::before {
     width: 40px;
     height: 32px;
     margin-right: 20px;
+    margin-top: -2px;
     background-image: url("../assets/icons/icon-email.svg");
 }
 
@@ -413,6 +415,7 @@ a[href="tel:+136745677554"]::before {
     height: 32px;
     margin-right: 20px;
     background-image: url("../assets/icons/icon-phone.svg");
+    margin-top: -2px;
 }
 
 /* Top */
@@ -448,11 +451,12 @@ a[href="tel:+136745677554"]::before {
     width: 698px;
     height: 728px;
     background-image: url(../assets/background/top-puppy.png);
+    background-repeat: no-repeat;
+
 }
 
 .top__heading {
     color: #fff;
-    width: 310px;
     margin-bottom: 42px;
 }
 
@@ -470,14 +474,14 @@ a[href="tel:+136745677554"]::before {
 }
 
 .about-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .about__image {
     width: 300px;
     height: 408px;
-    margin-right: 125px;
+    margin-right: 120px;
     margin-left: 175px;
     background-image: url(../assets/background/about-pets.png);
 }
@@ -536,10 +540,11 @@ a[href="tel:+136745677554"]::before {
 /* Pets Catalog */
 
 .pets__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 30px;
+    justify-content: center;
 }
 
 .pets__pagination {
@@ -588,7 +593,7 @@ a[href="tel:+136745677554"]::before {
 .help {
     padding-top: 80px;
     padding-bottom: 100px;
-    height: 611px;
+    min-height: 611px;
     background-color: #fff;
 }
 
@@ -672,30 +677,33 @@ a[href="tel:+136745677554"]::before {
 }
 
 .donation-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .donation__image {
     width: 505px;
     height: 261px;
     background-image: url(../assets/background/donation-dog.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-left: 143px;
-    margin-top: 11px;
+    margin-top: 8px;
+
 }
 
 .donation__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 19px;
     width: 380px;
 }
 
 .donation__banking {
     display: block;
     border-radius: 9px;
-    padding: 10px 15px;
+    padding: 8px 15px;
     width: 350px;
     height: 43px;
     background-color: #f1cdb3;
@@ -713,4 +721,143 @@ a[href="tel:+136745677554"]::before {
     width: 30px;
     height: 23px;
     margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .center {
+        width: 708px;
+    }
+
+    .top-wrapper {
+        grid-template-columns: none;
+        justify-items: center;
+        row-gap: 100px;
+        padding-top: 30px;
+    }
+
+    .top__background {
+        height: 1165px;
+    }
+
+    .top-content {
+        display: grid;
+        padding-top: 0;
+        width: 460px;
+    }
+
+    .top__image {
+        height: 593px;
+        width: 569px;
+        background-size: cover;
+        justify-self: end;
+    }
+
+    .footer {
+        height: 639px;
+    }
+
+    .footer-wrapper {
+        height: 100%;
+        padding-top: 30px;
+        column-gap: 60px;
+        row-gap: 0;
+        justify-content: center;
+    }
+
+    .footer__address .footer__heading {
+        margin-bottom: 30px;
+    }
+
+
+    a[href="mailto:email@shelter.com"]::before {
+        margin-top: -5px;
+
+    }
+
+    a[href="tel:+136745677554"]::before {
+        margin-top: -3px;
+    }
+
+    .top-content__button {
+        justify-self: center;
+    }
+
+    .about {
+        padding-top: 65px;
+    }
+
+    .about-wrapper {
+        justify-content: center;
+    }
+
+    .about__image {
+        margin-top: 80px;
+        order: 1;
+        margin-left: 124px;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+    .carousel__control_left {
+        left: -64px;
+    }
+
+    .carousel__control_right {
+        right: -64px;
+    }
+
+    .help__list {
+        width: 630px;
+        column-gap: 60px;
+    }
+
+    .help__item {
+        width: 170px;
+    }
+
+    .donation {
+        padding-top: 78px;
+        padding-bottom: 100px;
+    }
+
+    .donation-wrapper {
+        justify-content: center;
+    }
+
+    .donation__image {
+        order: 1;
+        margin-left: 0;
+        margin-top: 32px;
+    }
+
+    .pets__heading {
+        margin-bottom: 30px;
+    }
+
+    .pets-catalog {
+        padding-bottom: 76px;
+    }
+
+    .pets-catalog .pets__card:nth-last-child(1),
+    .pets-catalog .pets__card:nth-last-child(2) {
+        display: none;
+    }
+
+    .pets__pagination {
+        padding-top: 39px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .center {
+        width: 280px;
+    }
 }
