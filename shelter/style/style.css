@@ -879,6 +879,10 @@ a[href="tel:+136745677554"]::before {
         font-size: 15px;
     }
 
+    .heading_XS {
+        letter-spacing: 0;
+    }
+
     .header-wrapper {
         padding: 0 10px;
     }
@@ -964,7 +968,6 @@ a[href="tel:+136745677554"]::before {
         bottom: 94px;
     }
 
-
     .carousel__control_left {
         left: 43px;
     }
@@ -989,5 +992,33 @@ a[href="tel:+136745677554"]::before {
 
     .help__item {
         width: 130px;
+    }
+
+    .donation {
+        padding: 42px 0;
+    }
+
+    .donation-wrapper {
+        justify-content: center;
+    }
+
+    .donation__content {
+        align-items: center;
+    }
+
+    .donation__image {
+        order: 1;
+        margin: 0;
+        width: 260px;
+        height: 135px;
+    }
+
+    .donation__banking {
+        width: 281px;
+        height: 43px;
+    }
+
+    .text_legal {
+        text-align: justify;
     }
 }
