@@ -934,4 +934,38 @@ a[href="tel:+136745677554"]::before {
     .about__text {
         text-align: justify;
     }
+
+    .pets {
+        padding: 42px 0;
+    }
+
+    .pets__heading {
+        margin-bottom: 42px;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel__cards .pets__card:not(:first-child) {
+        display: none;
+    }
+
+    .carousel__button {
+        margin-top: 114px;
+    }
+
+    .carousel__control {
+        top: auto;
+        bottom: 94px;
+    }
+
+
+    .carousel__control_left {
+        left: 43px;
+    }
+
+    .carousel__control_right {
+        right: 43px;
+    }
 }
