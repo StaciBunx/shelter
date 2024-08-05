@@ -752,20 +752,30 @@ a[href="tel:+136745677554"]::before {
         justify-self: end;
     }
 
+    .footer {
+        height: 639px;
+    }
+
     .footer-wrapper {
+        height: 100%;
         padding-top: 30px;
         column-gap: 60px;
         row-gap: 0;
         justify-content: center;
     }
 
-    /* .footer__contacts,
-    .footer__address {
-        padding-bottom: 65px;
-    } */
+    .footer__address .footer__heading {
+        margin-bottom: 30px;
+    }
 
-    .footer__image {
-        padding-top: 10px;
+
+    a[href="mailto:email@shelter.com"]::before {
+        margin-top: -5px;
+
+    }
+
+    a[href="tel:+136745677554"]::before {
+        margin-top: -3px;
     }
 
     .top-content__button {
@@ -801,8 +811,6 @@ a[href="tel:+136745677554"]::before {
     .carousel__control_right {
         right: -64px;
     }
-
-    .help {}
 
     .help__list {
         width: 630px;
