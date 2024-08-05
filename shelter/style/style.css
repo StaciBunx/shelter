@@ -337,13 +337,15 @@ img {
     /* justify-content: space-between; */
     width: 280px;
     padding-bottom: 60px;
-    gap: 40px;
+    gap: 42px;
 }
 
 .footer__address {
     height: 294px;
     width: 300px;
     padding-bottom: 60px;
+    /* gap: 33px; */
+
 }
 
 .footer__heading {
@@ -351,16 +353,16 @@ img {
 }
 
 .footer__text {
-    line-height: 120%;
+    line-height: 117%;
     color: #f1cdb3;
 }
 
 .footer__address .footer__heading {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 }
 
 .footer__address address:first-of-type {
-    margin-bottom: 35px;
+    margin-bottom: 36px;
 }
 
 .footer__address address {
@@ -374,14 +376,15 @@ img {
     display: block;
     width: 20px;
     height: 32px;
-    left: 0;
+    left: -1px;
+    top: -3px;
     background-image: url("../assets/icons/icon-marker.svg");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .footer__address address:first-of-type::before {
-    top: 6px;
+    top: 7px;
 }
 
 .footer__image {
@@ -401,6 +404,7 @@ a[href="mailto:email@shelter.com"]::before {
     width: 40px;
     height: 32px;
     margin-right: 20px;
+    margin-top: -2px;
     background-image: url("../assets/icons/icon-email.svg");
 }
 
@@ -411,6 +415,7 @@ a[href="tel:+136745677554"]::before {
     height: 32px;
     margin-right: 20px;
     background-image: url("../assets/icons/icon-phone.svg");
+    margin-top: -2px;
 }
 
 /* Top */
