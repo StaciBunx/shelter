@@ -1061,15 +1061,43 @@ a[href="tel:+136745677554"]::before {
 
     .footer__contacts {
         padding: 0;
-        gap: 40px;
+        gap: 43px;
         width: 278px;
         height: 208px;
+        align-items: center;
+    }
+
+    a[href="mailto:email@shelter.com"]::before {
+        margin-top: -5px;
     }
 
     .footer__address {
         padding: 0;
         width: 300px;
         height: 222px;
+    }
+
+    .footer__address .footer__heading {
+        margin-bottom: 38px;
+    }
+
+    .footer__address address:first-of-type {
+        margin-bottom: 43px;
+    }
+
+    .footer__address address::before {
+        left: 1px;
+    }
+
+    .footer__address address:first-of-type::before {
+        top: 9px;
+    }
+
+    .footer__image {
+        width: 260px;
+        height: 269px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .pets-catalog {
