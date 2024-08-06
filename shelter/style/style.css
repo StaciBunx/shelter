@@ -986,7 +986,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .help {
-        padding: 42px 0;
+        padding: 42px 0 37px;
     }
 
     .help__heading {
