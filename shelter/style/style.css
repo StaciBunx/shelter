@@ -1019,10 +1019,13 @@ a[href="tel:+136745677554"]::before {
 
     .donation-wrapper {
         justify-content: center;
+        gap: 42px;
     }
 
     .donation__content {
         align-items: center;
+        gap: 24px;
+        padding: 0 10px;
     }
 
     .donation .heading_S {
@@ -1042,6 +1045,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .text_legal {
+        margin-top: -5px;
         text-align: justify;
     }
 
