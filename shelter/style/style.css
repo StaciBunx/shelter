@@ -872,6 +872,8 @@ a[href="tel:+136745677554"]::before {
     .heading_L,
     .heading_M {
         font-size: 25px;
+        letter-spacing: 0.06em;
+
     }
 
     .heading_XS {
