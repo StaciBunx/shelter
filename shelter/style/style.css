@@ -1077,6 +1077,8 @@ a[href="tel:+136745677554"]::before {
     }
 
     .footer__address {
+        display: flex;
+        flex-direction: column;
         padding: 0;
         width: 300px;
         height: 222px;
@@ -1084,6 +1086,8 @@ a[href="tel:+136745677554"]::before {
 
     .footer__address .footer__heading {
         margin-bottom: 38px;
+        width: 270px;
+        align-self: center;
     }
 
     .footer__address address:first-of-type {
