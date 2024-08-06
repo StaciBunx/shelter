@@ -869,10 +869,13 @@ a[href="tel:+136745677554"]::before {
         text-align: center;
     }
 
-    .heading_L,
-    .heading_M {
+    .heading_L {
         font-size: 25px;
         letter-spacing: 0.06em;
+    }
+
+    .heading_M {
+        font-size: 25px;
 
     }
 
