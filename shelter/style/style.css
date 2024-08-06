@@ -915,7 +915,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .about {
-        padding: 42px 10px;
+        padding: 27px 10px 42px;
     }
 
     .about-wrapper {
@@ -932,8 +932,22 @@ a[href="tel:+136745677554"]::before {
         background-repeat: no-repeat;
     }
 
+    .about-content {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 0;
+    }
+
+    .about-content .heading {
+        margin-bottom: 25px;
+    }
+
     .about__text {
         text-align: justify;
+    }
+
+    .about__text+.about__text {
+        margin-top: 22px;
     }
 
     .pets {
