@@ -329,6 +329,14 @@ img {
     align-items: flex-end;
 }
 
+.footer-wrapper::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 310px;
+    background-image: url("../assets/background/footer-puppy.png");
+}
+
 .footer__contacts {
     height: 294px;
     display: flex;
@@ -384,12 +392,6 @@ img {
 
 .footer__address address:first-of-type::before {
     top: 6px;
-}
-
-.footer__image {
-    width: 300px;
-    height: 310px;
-    background-image: url("../assets/background/footer-puppy.png");
 }
 
 a[href="mailto:email@shelter.com"],
