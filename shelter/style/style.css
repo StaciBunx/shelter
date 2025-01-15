@@ -64,6 +64,7 @@ li {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 .page {
@@ -94,9 +95,14 @@ img {
 }
 
 .center {
-    width: 1200px;
+    max-width: 1280px;
+    padding: 0 40px;
     margin: 0 auto;
 }
+
+/* .content {
+    padding: 3% 2% 0;
+} */
 
 /* Text Styles */
 
@@ -221,6 +227,7 @@ img {
 }
 
 /* Logo */
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -334,6 +341,14 @@ img {
     align-items: flex-end;
 }
 
+.footer-wrapper::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 310px;
+    background-image: url("../assets/background/footer-puppy.png");
+}
+
 .footer__contacts {
     height: 294px;
     display: flex;
@@ -388,12 +403,6 @@ img {
     top: 7px;
 }
 
-.footer__image {
-    width: 300px;
-    height: 310px;
-    background-image: url("../assets/background/footer-puppy.png");
-}
-
 a[href="mailto:email@shelter.com"],
 a[href="tel:+136745677554"] {
     display: flex;
@@ -427,6 +436,7 @@ a[href="tel:+136745677554"]::before {
 
 .top__background {
     position: absolute;
+    /* height: auto; */
     height: 908px;
     width: 100%;
     background-color: #211f20;
@@ -438,22 +448,26 @@ a[href="tel:+136745677554"]::before {
 }
 
 .top-wrapper {
-    display: grid;
-    grid-template-columns: 460px 1fr;
-    gap: 42px;
+    display: flex;
     padding-top: 60px;
+    min-height: 788px;
+}
+
+.top-wrapper::after {
+    content: "";
+    display: block;
+    background-image: url(../assets/background/top-puppy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 698px;
 }
 
 .top-content {
     padding-top: 163px;
-}
-
-.top__image {
-    width: 698px;
-    height: 728px;
-    background-image: url(../assets/background/top-puppy.png);
-    background-repeat: no-repeat;
-
+    margin-right: auto;
+    max-width: 460px;
+    flex-shrink: 3;
 }
 
 .top__heading {
@@ -477,22 +491,30 @@ a[href="tel:+136745677554"]::before {
 .about-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
 }
 
-.about__image {
+.about-wrapper::before {
+    content: '';
+    display: block;
     width: 300px;
     height: 408px;
     margin-right: 120px;
     margin-left: 175px;
     background-image: url(../assets/background/about-pets.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-content {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    width: 430px;
+    max-width: 430px;
     padding-top: 14px;
+    flex-shrink: 3;
 }
 
 
@@ -517,11 +539,12 @@ a[href="tel:+136745677554"]::before {
     flex-direction: column;
     align-items: center;
     gap: 28px;
-    width: 270px;
+    max-width: 270px;
     height: 435px;
     border-radius: 9px;
     background-color: #fff;
     transition: all 0.3s linear;
+    padding-bottom: 30px;
 }
 
 .pets__card:hover {
@@ -560,16 +583,19 @@ a[href="tel:+136745677554"]::before {
 /* Carousel */
 
 .carousel {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+    column-gap: 4.4%;
 }
 
 .carousel__cards {
     display: flex;
-    gap: 90px;
-    justify-content: center;
+    width: 990px;
+    gap: 9%;
+    justify-content: space-between;
 }
 
 .carousel__button {
@@ -577,16 +603,37 @@ a[href="tel:+136745677554"]::before {
 }
 
 .carousel__control {
-    position: absolute;
-    top: 192px;
+    max-height: 52px;
+    padding: 0;
+    border: none;
+    background-color: #f6f6f6;
+    cursor: pointer;
 }
 
-.carousel__control_left {
-    left: -105px;
+.carousel__control svg,
+.carousel__control rect {
+    transition: all 0.3s linear;
 }
 
-.carousel__control_right {
-    right: -105px;
+.carousel__control:hover rect {
+    fill: #fddcc4;
+    stroke: #fddcc4;
+}
+
+
+.carousel__control:active rect {
+    fill: #f1cdb3;
+    stroke: #f1cdb3;
+}
+
+
+.carousel__control:disabled rect {
+    fill: transparent;
+    stroke: #CDCDCD;
+}
+
+.carousel__control:disabled path {
+    fill: #CDCDCD;
 }
 
 /* Help */
@@ -685,7 +732,9 @@ a[href="tel:+136745677554"]::before {
     flex-wrap: wrap;
 }
 
-.donation__image {
+.donation-wrapper::before {
+    content: '';
+    display: block;
     width: 505px;
     height: 261px;
     background-image: url(../assets/background/donation-dog.png);
@@ -693,7 +742,6 @@ a[href="tel:+136745677554"]::before {
     background-repeat: no-repeat;
     margin-left: 143px;
     margin-top: 8px;
-
 }
 
 .donation__content {
@@ -726,15 +774,16 @@ a[href="tel:+136745677554"]::before {
     margin-right: 15px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
 
     .center {
-        width: 708px;
+        width: 768px;
+        padding: 0 30px;
     }
 
     .top-wrapper {
-        grid-template-columns: none;
-        justify-items: center;
+        flex-direction: column;
+        align-items: center;
         row-gap: 100px;
         padding-top: 30px;
     }
@@ -743,23 +792,18 @@ a[href="tel:+136745677554"]::before {
         height: 1165px;
     }
 
+    /*
     .top-content {
         display: grid;
         padding-top: 0;
-        width: 460px;
-    }
+    } */
 
 
     .top-content__button {
         justify-self: center;
     }
 
-    .top__image {
-        height: 593px;
-        width: 569px;
-        background-size: cover;
-        justify-self: end;
-    }
+
 
     .footer {
         height: 639px;
@@ -860,7 +904,7 @@ a[href="tel:+136745677554"]::before {
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .center {
         width: 300px;
     }
@@ -896,9 +940,9 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top-wrapper {
-        grid-template-columns: none;
-        justify-items: center;
-        row-gap: 105px;
+        align-items: center;
+        /* row-gap: 105px; */
+        justify-content: space-between;
         padding-top: 30px;
     }
 
