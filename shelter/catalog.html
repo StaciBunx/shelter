@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our pets</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <script src="./javascript/index.js" defer></script>
 </head>
 
@@ -13,20 +20,19 @@
 
     <header class="header header_color_white">
         <div class="header-wrapper center">
-            <div class="logo">
-                <a href="./index.html">
-                    <p class="logo__title logo__title_dark">Cozy House</p>
-                    <p class="logo__subtitle logo__subtitle_dark">Shelter for pets in Boston</p>
-                </a>
-            </div>
+            <a class="logo" href="./index.html">
+                <p class="logo__title logo__title_dark">Cozy House</p>
+                <p class="logo__subtitle logo__subtitle_dark">Shelter for pets in Boston</p>
+            </a>
             <nav class="header__navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a class="text" href="#about">About the
+                    <li class="navigation__item"><a class="text" href="./index.html#about">About the
                             shelter</a></li>
-                    <li class="navigation__item"><a class="text navigation__link_current_dark" href="./catalog.html">Our
+                    <li class="navigation__item"><a class="text navigation__link_current_dark">Our
                             pets</a>
                     </li>
-                    <li class="navigation__item"><a class="text navigation__link_normal_dark" href="#help">Help the
+                    <li class="navigation__item"><a class="text navigation__link_normal_dark"
+                            href="./index.html#help">Help the
                             shelter</a>
                     </li>
                     <li class="navigation__item"><a class="text navigation__link_normal_dark"
@@ -37,8 +43,9 @@
         </div>
     </header>
     <main class="page__main">
+        <h1 class="visually-hidden">Cozy Home. Shelter for pets in Boston</h1>
         <section class="pets-catalog center">
-            <h3 class="heading heading_M pets__heading">Our friends who
+            <h3 class="heading heading_M pets__heading">Our friends who<br>
                 are looking for a house</h3>
             <div class="pets__cards">
                 <article class="pets__card">
@@ -139,15 +146,16 @@
             </div>
             <div class="footer__address">
                 <h3 class="heading heading_M footer__heading">We are waiting for your visit</h3>
-                <address class="heading heading_S"> <a class="footer__text"
-                        href="https://maps.app.goo.gl/BA27LbRfkbuWMpcS7" target="_blank">1
+                <address>
+                    <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/BA27LbRfkbuWMpcS7"
+                        target="_blank">1
                         Central Street, Boston (entrance from the store)</a>
                 </address>
-                <address class="heading heading_S footer__text"><a class="footer__text"
-                        href="https://maps.app.goo.gl/k959TMkYaxmAAgZH8" target="_blank">18 South Park, London</a>
+                <address>
+                    <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/k959TMkYaxmAAgZH8"
+                        target="_blank">18 South Park, London</a>
                 </address>
             </div>
-            <div class="footer__image"></div>
         </div>
     </footer>
 </body>

@@ -1,1 +1,1 @@
-Deploy link : https://stacibunx.github.io/shelter/
+Deploy link : https://stacibunx.github.io/shelter/shelter
