@@ -476,7 +476,9 @@ a[href="tel:+136745677554"]::before {
     grid-template-columns: 1fr 1fr;
 }
 
-.about__image {
+.about-wrapper::before {
+    content: '';
+    display: block;
     width: 300px;
     height: 408px;
     margin-right: 125px;
