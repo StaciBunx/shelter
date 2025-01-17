@@ -450,9 +450,7 @@ a[href="tel:+136745677554"]::before {
 
 .top-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     padding-top: 60px;
     min-height: 788px;
     gap: 42px;
@@ -461,7 +459,7 @@ a[href="tel:+136745677554"]::before {
 .top-content {
     padding-top: 163px;
     max-width: 460px;
-    flex-shrink: 1;
+    flex-shrink: 3;
 }
 
 .top__heading {
@@ -472,6 +470,13 @@ a[href="tel:+136745677554"]::before {
 .top__text {
     color: #cdcdcd;
     margin-bottom: 42px;
+}
+
+
+.top__image {
+    object-fit: scale-down;
+    max-height: 728px;
+
 }
 
 /* About */
@@ -761,7 +766,7 @@ a[href="tel:+136745677554"]::before {
     margin-right: 15px;
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (max-width: 768px) {
 
     .center {
         width: 768px;
@@ -769,120 +774,136 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .top__image {
+        max-height: 593px;
+    }
+
+
+
+    /*
+
+    .top-wrapper {
         flex-direction: column;
         align-items: center;
     }
 
     .top__background {
-        height: 1165px;
-    }
+        height: 1165px; */
+}
 
 
-    .top-content {
+/* .top-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 30px;
-    }
+    } */
 
 
-    .top-content__button {
-        justify-self: center;
-    }
+.top-content__button {
+    justify-self: center;
+}
 
 
 
-    .footer {
-        height: 639px;
-    }
+.footer {
+    height: 639px;
+}
 
-    .footer-wrapper {
-        height: 100%;
-        padding-top: 30px;
-        column-gap: 60px;
-        row-gap: 0;
-        justify-content: center;
-    }
+.footer-wrapper {
+    height: 100%;
+    padding-top: 30px;
+    column-gap: 60px;
+    row-gap: 0;
+    justify-content: center;
+}
 
-    .footer__address .footer__heading {
-        margin-bottom: 30px;
-    }
+.footer__address .footer__heading {
+    margin-bottom: 30px;
+}
 
 
-    a[href="mailto:email@shelter.com"]::before {
-        margin-top: -5px;
-
-    }
-
-    a[href="tel:+136745677554"]::before {
-        margin-top: -3px;
-    }
-
-    .about {
-        padding-top: 65px;
-    }
-
-    .about-wrapper {
-        justify-content: center;
-    }
-
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-
-    .carousel__control_left {
-        left: -64px;
-    }
-
-    .carousel__control_right {
-        right: -64px;
-    }
-
-    .help__list {
-        width: 630px;
-        column-gap: 60px;
-    }
-
-    .help__item {
-        width: 170px;
-    }
-
-    .donation {
-        padding-top: 78px;
-        padding-bottom: 100px;
-    }
-
-    .donation-wrapper {
-        justify-content: center;
-    }
-
-    .pets__heading {
-        margin-bottom: 30px;
-    }
-
-    .pets-catalog {
-        padding-bottom: 76px;
-    }
-
-    .pets-catalog .pets__card:nth-last-child(1),
-    .pets-catalog .pets__card:nth-last-child(2) {
-        display: none;
-    }
-
-    .pets__pagination {
-        padding-top: 39px;
-    }
+a[href="mailto:email@shelter.com"]::before {
+    margin-top: -5px;
 
 }
 
-@media screen and (max-width: 767px) {
+a[href="tel:+136745677554"]::before {
+    margin-top: -3px;
+}
+
+.about {
+    padding-top: 65px;
+}
+
+.about-wrapper {
+    justify-content: center;
+}
+
+.carousel__cards {
+    gap: 40px
+}
+
+.carousel__cards .pets__card:last-child {
+    display: none;
+}
+
+.carousel__control_left {
+    left: -64px;
+}
+
+.carousel__control_right {
+    right: -64px;
+}
+
+.help__list {
+    width: 630px;
+    column-gap: 60px;
+}
+
+.help__item {
+    width: 170px;
+}
+
+.donation {
+    padding-top: 78px;
+    padding-bottom: 100px;
+}
+
+.donation-wrapper {
+    justify-content: center;
+}
+
+.pets__heading {
+    margin-bottom: 30px;
+}
+
+.pets-catalog {
+    padding-bottom: 76px;
+}
+
+.pets-catalog .pets__card:nth-last-child(1),
+.pets-catalog .pets__card:nth-last-child(2) {
+    display: none;
+}
+
+.pets__pagination {
+    padding-top: 39px;
+}
+
+@media screen and (max-width: 320px) {
     .center {
         width: 300px;
     }
+
+
+    .top__image {
+        max-height: 260px;
+    }
+
 
     .heading {
         text-align: center;
@@ -921,12 +942,12 @@ a[href="tel:+136745677554"]::before {
         padding-top: 30px;
     }
 
-    .top-content {
+    /* .top-content {
         padding-top: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     .top__text {
         text-align: center;
