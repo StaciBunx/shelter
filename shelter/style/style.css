@@ -434,9 +434,10 @@ a[href="tel:+136745677554"]::before {
     position: relative;
 }
 
-.top__background {
+.top::after {
+    content: "";
+    display: block;
     position: absolute;
-    /* height: auto; */
     height: 908px;
     width: 100%;
     background-color: #211f20;
@@ -450,6 +451,7 @@ a[href="tel:+136745677554"]::before {
 .top-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     padding-top: 60px;
     min-height: 788px;
@@ -544,11 +546,6 @@ a[href="tel:+136745677554"]::before {
 .pets__card:hover .button {
     background-color: #fddcc4;
     border-color: #fddcc4;
-}
-
-.pets__image {
-    background-color: #fff;
-    border-radius: 9px 9px 0 0;
 }
 
 /* Pets Catalog */
@@ -774,11 +771,6 @@ a[href="tel:+136745677554"]::before {
     .top-wrapper {
         flex-direction: column;
         align-items: center;
-
-    }
-
-    .top-wrapper::after {
-        height: 569px;
     }
 
     .top__background {
@@ -834,12 +826,6 @@ a[href="tel:+136745677554"]::before {
         justify-content: center;
     }
 
-    .about__image {
-        margin-top: 80px;
-        order: 1;
-        margin-left: 124px;
-    }
-
     .carousel__cards {
         gap: 40px
     }
@@ -872,12 +858,6 @@ a[href="tel:+136745677554"]::before {
 
     .donation-wrapper {
         justify-content: center;
-    }
-
-    .donation__image {
-        order: 1;
-        margin-left: 0;
-        margin-top: 32px;
     }
 
     .pets__heading {
@@ -948,14 +928,6 @@ a[href="tel:+136745677554"]::before {
         align-items: center;
     }
 
-    .top__image {
-        width: 260px;
-        height: 271px;
-        background-size: cover;
-        justify-self: end;
-        background-repeat: no-repeat;
-    }
-
     .top__text {
         text-align: center;
     }
@@ -967,15 +939,6 @@ a[href="tel:+136745677554"]::before {
     .about-wrapper {
         justify-content: center;
         gap: 42px;
-    }
-
-    .about__image {
-        order: 1;
-        width: 260px;
-        height: 353px;
-        margin: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .about-content {
@@ -1076,13 +1039,6 @@ a[href="tel:+136745677554"]::before {
         font-size: 15px;
     }
 
-    .donation__image {
-        order: 1;
-        margin: 0;
-        width: 260px;
-        height: 135px;
-    }
-
     .donation__banking {
         width: 281px;
         height: 43px;
@@ -1139,13 +1095,6 @@ a[href="tel:+136745677554"]::before {
 
     .footer__address address:first-of-type::before {
         top: 9px;
-    }
-
-    .footer__image {
-        width: 260px;
-        height: 269px;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .pets-catalog {
