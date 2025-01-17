@@ -438,7 +438,7 @@ a[href="tel:+136745677554"]::before {
     content: "";
     display: block;
     position: absolute;
-    height: 908px;
+    min-height: 908px;
     width: 100%;
     background-color: #211f20;
     background-image: url("../assets/background/gradient-background.jpg");
