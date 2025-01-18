@@ -480,7 +480,6 @@ a[href="tel:+136745677554"]::before {
 .top__image {
     object-fit: scale-down;
     max-height: 728px;
-
 }
 
 /* About */
@@ -493,20 +492,13 @@ a[href="tel:+136745677554"]::before {
 
 .about-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 120px;
+    gap: 10%;
 }
 
-.about-wrapper::before {
-    content: '';
-    display: block;
-    width: 300px;
-    height: 408px;
-    background-image: url(../assets/background/about-pets.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.about__image {
+    max-height: 408px;
+    object-fit: scale-down;
 }
 
 .about-content {
