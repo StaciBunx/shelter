@@ -775,11 +775,17 @@ a[href="tel:+136745677554"]::before {
 
     .top-wrapper {
         flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .top-content {
+        padding-top: 0;
     }
 
     .top__image {
         max-height: 593px;
     }
+
 
 
 
