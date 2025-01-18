@@ -472,6 +472,10 @@ a[href="tel:+136745677554"]::before {
     margin-bottom: 42px;
 }
 
+.top__image-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
 
 .top__image {
     object-fit: scale-down;
@@ -786,118 +790,91 @@ a[href="tel:+136745677554"]::before {
         max-height: 593px;
     }
 
-
-
-
-    /*
-
-    .top-wrapper {
-        flex-direction: column;
-        align-items: center;
+    .footer {
+        height: 639px;
     }
 
-    .top__background {
-        height: 1165px; */
-}
-
-
-/* .top-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .footer-wrapper {
+        height: 100%;
         padding-top: 30px;
-    } */
+        column-gap: 60px;
+        row-gap: 0;
+        justify-content: center;
+    }
+
+    .footer__address .footer__heading {
+        margin-bottom: 30px;
+    }
 
 
-.top-content__button {
-    justify-self: center;
-}
+    a[href="mailto:email@shelter.com"]::before {
+        margin-top: -5px;
 
+    }
 
+    a[href="tel:+136745677554"]::before {
+        margin-top: -3px;
+    }
 
-.footer {
-    height: 639px;
-}
+    .about {
+        padding-top: 65px;
+    }
 
-.footer-wrapper {
-    height: 100%;
-    padding-top: 30px;
-    column-gap: 60px;
-    row-gap: 0;
-    justify-content: center;
-}
+    .about-wrapper {
+        justify-content: center;
+    }
 
-.footer__address .footer__heading {
-    margin-bottom: 30px;
-}
+    .carousel__cards {
+        gap: 40px
+    }
 
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
 
-a[href="mailto:email@shelter.com"]::before {
-    margin-top: -5px;
+    .carousel__control_left {
+        left: -64px;
+    }
 
-}
+    .carousel__control_right {
+        right: -64px;
+    }
 
-a[href="tel:+136745677554"]::before {
-    margin-top: -3px;
-}
+    .help__list {
+        width: 630px;
+        column-gap: 60px;
+    }
 
-.about {
-    padding-top: 65px;
-}
+    .help__item {
+        width: 170px;
+    }
 
-.about-wrapper {
-    justify-content: center;
-}
+    .donation {
+        padding-top: 78px;
+        padding-bottom: 100px;
+    }
 
-.carousel__cards {
-    gap: 40px
-}
+    .donation-wrapper {
+        justify-content: center;
+    }
 
-.carousel__cards .pets__card:last-child {
-    display: none;
-}
+    .pets__heading {
+        margin-bottom: 30px;
+    }
 
-.carousel__control_left {
-    left: -64px;
-}
+    .pets-catalog {
+        padding-bottom: 76px;
+    }
 
-.carousel__control_right {
-    right: -64px;
-}
+    .pets-catalog .pets__card:nth-last-child(1),
+    .pets-catalog .pets__card:nth-last-child(2) {
+        display: none;
+    }
 
-.help__list {
-    width: 630px;
-    column-gap: 60px;
-}
+    .pets__pagination {
+        padding-top: 39px;
+    }
 
-.help__item {
-    width: 170px;
-}
-
-.donation {
-    padding-top: 78px;
-    padding-bottom: 100px;
-}
-
-.donation-wrapper {
-    justify-content: center;
-}
-
-.pets__heading {
-    margin-bottom: 30px;
-}
-
-.pets-catalog {
-    padding-bottom: 76px;
-}
-
-.pets-catalog .pets__card:nth-last-child(1),
-.pets-catalog .pets__card:nth-last-child(2) {
-    display: none;
-}
-
-.pets__pagination {
-    padding-top: 39px;
 }
 
 @media screen and (max-width: 320px) {
@@ -905,11 +882,18 @@ a[href="tel:+136745677554"]::before {
         width: 300px;
     }
 
+    .top-content {
+        display: flex;
+        flex-direction: column;
+    }
 
     .top__image {
         max-height: 260px;
     }
 
+    .top-content__button {
+        justify-self: center;
+    }
 
     .heading {
         text-align: center;
@@ -941,19 +925,6 @@ a[href="tel:+136745677554"]::before {
         display: none;
     }
 
-    .top-wrapper {
-        align-items: center;
-        /* row-gap: 105px; */
-        justify-content: space-between;
-        padding-top: 30px;
-    }
-
-    /* .top-content {
-        padding-top: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
 
     .top__text {
         text-align: center;
