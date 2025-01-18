@@ -773,7 +773,7 @@ a[href="tel:+136745677554"]::before {
 @media (max-width: 768px) {
 
     .center {
-        width: 768px;
+        max-width: 768px;
         padding: 0 30px;
     }
 
@@ -879,7 +879,7 @@ a[href="tel:+136745677554"]::before {
 
 @media screen and (max-width: 320px) {
     .center {
-        width: 300px;
+        max-width: 300px;
     }
 
     .top-content {
