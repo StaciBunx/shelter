@@ -453,7 +453,7 @@ a[href="tel:+136745677554"]::before {
     justify-content: center;
     padding-top: 60px;
     min-height: 788px;
-    gap: 42px;
+    gap: 3.5%;
 }
 
 .top-content {
