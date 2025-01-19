@@ -782,6 +782,14 @@ a[href="tel:+136745677554"]::before {
         max-height: 593px;
     }
 
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    .about-content {
+        order: -1;
+    }
+
     .footer {
         height: 639px;
     }
