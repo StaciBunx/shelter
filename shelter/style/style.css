@@ -647,7 +647,7 @@ a[href="tel:+136745677554"]::before {
 }
 
 .help__list {
-    width: 1026px;
+    max-width: 1026px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -782,13 +782,20 @@ a[href="tel:+136745677554"]::before {
         max-height: 593px;
     }
 
+    .about {
+        padding-top: 80px;
+    }
+
     .about-wrapper {
         flex-direction: column;
+        align-items: center;
+        gap: 80px;
     }
 
     .about-content {
         order: -1;
     }
+
 
     .footer {
         height: 639px;
@@ -814,14 +821,6 @@ a[href="tel:+136745677554"]::before {
 
     a[href="tel:+136745677554"]::before {
         margin-top: -3px;
-    }
-
-    .about {
-        padding-top: 65px;
-    }
-
-    .about-wrapper {
-        justify-content: center;
     }
 
     .carousel__cards {
