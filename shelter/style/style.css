@@ -330,7 +330,6 @@ img {
     background-image: url("../assets/background/gradient-background.jpg");
     background-repeat: no-repeat;
     position: relative;
-
 }
 
 .footer-wrapper {
@@ -717,19 +716,16 @@ a[href="tel:+136745677554"]::before {
 .donation-wrapper {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.donation-wrapper::before {
-    content: '';
-    display: block;
-    width: 505px;
-    height: 261px;
-    background-image: url(../assets/background/donation-dog.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 143px;
-    margin-top: 8px;
+.donation__image-wrapper {
+    padding-top: 8px;
+}
+
+.donation__image {
+    object-fit: scale-down;
+    max-height: 261px;
 }
 
 .donation__content {
@@ -865,6 +861,7 @@ a[href="tel:+136745677554"]::before {
     .donation-wrapper {
         justify-content: center;
     }
+
 
     .pets__heading {
         margin-bottom: 30px;
