@@ -583,7 +583,7 @@ a[href="tel:+136745677554"]::before {
 .carousel__cards {
     display: flex;
     width: 990px;
-    gap: 9%;
+    gap: 4%;
     justify-content: space-between;
 }
 
@@ -804,11 +804,6 @@ a[href="tel:+136745677554"]::before {
         order: -1;
     }
 
-    .pets {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-
     .footer-wrapper {
         padding-top: 30px;
         flex-wrap: wrap;
@@ -831,22 +826,6 @@ a[href="tel:+136745677554"]::before {
         margin-top: -3px;
     }
 
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-
-    .carousel__control_left {
-        left: -64px;
-    }
-
-    .carousel__control_right {
-        right: -64px;
-    }
-
     .help__list {
         width: 630px;
         column-gap: 60px;
@@ -865,13 +844,17 @@ a[href="tel:+136745677554"]::before {
         justify-content: center;
     }
 
-
-    .pets__heading {
-        margin-bottom: 30px;
+    .pets {
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 
     .pets-catalog {
         padding-bottom: 76px;
+    }
+
+    .pets__card {
+        width: 270px;
     }
 
     .pets-catalog .pets__card:nth-last-child(1),
@@ -882,6 +865,30 @@ a[href="tel:+136745677554"]::before {
     .pets__pagination {
         padding-top: 39px;
     }
+
+    .carousel {
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+    .carousel__control_left {
+        position: relative;
+        left: 20px;
+    }
+
+    .carousel__control_right {
+        position: relative;
+        right: 20px;
+    }
+
 
 }
 
