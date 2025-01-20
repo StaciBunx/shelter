@@ -334,18 +334,9 @@ img {
 
 .footer-wrapper {
     display: flex;
-    flex-wrap: wrap;
     gap: 160px;
     min-height: 350px;
     align-items: flex-end;
-}
-
-.footer-wrapper::after {
-    content: '';
-    display: block;
-    width: 300px;
-    height: 310px;
-    background-image: url("../assets/background/footer-puppy.png");
 }
 
 .footer__contacts {
@@ -361,6 +352,11 @@ img {
     height: 294px;
     width: 300px;
     padding-bottom: 60px;
+}
+
+.footer__image {
+    object-fit: scale-down;
+    max-height: 310px;
 }
 
 .footer__heading {
