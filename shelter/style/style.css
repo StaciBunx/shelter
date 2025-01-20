@@ -768,8 +768,9 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top-wrapper {
-        flex-wrap: wrap;
         padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .top-content {
@@ -779,6 +780,10 @@ a[href="tel:+136745677554"]::before {
 
     .top-content__button {
         justify-self: center;
+    }
+
+    .top__image-wrapper {
+        align-self: flex-end;
     }
 
     .top__image {
