@@ -149,7 +149,7 @@ img {
 
 .button {
     display: inline-block;
-    height: 52px;
+    min-height: 52px;
     padding: 15px 45px;
     border-radius: 100px;
     font-family: "Georgia", "Times New Roman", "Times", serif;
@@ -161,6 +161,7 @@ img {
     color: #292929;
     border: 2px solid transparent;
     transition: all 0.3s linear;
+    text-align: center;
 }
 
 .button_dark {
@@ -460,7 +461,7 @@ a[href="tel:+136745677554"]::before {
 .top-content {
     padding-top: 163px;
     max-width: 460px;
-    flex-shrink: 3;
+    flex-shrink: 2;
 }
 
 .top__heading {
@@ -635,7 +636,6 @@ a[href="tel:+136745677554"]::before {
 }
 
 .help-wrapper {
-    /* width: 1026px; */
     display: flex;
     flex-direction: column;
     align-items: center;
