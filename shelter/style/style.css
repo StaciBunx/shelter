@@ -542,6 +542,10 @@ a[href="tel:+136745677554"]::before {
     padding-bottom: 30px;
 }
 
+.pets__card__button {
+    margin: 0 5%;
+}
+
 .pets__card:hover {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
@@ -550,6 +554,7 @@ a[href="tel:+136745677554"]::before {
     background-color: #fddcc4;
     border-color: #fddcc4;
 }
+
 
 /* Pets Catalog */
 
