@@ -778,7 +778,6 @@ a[href="tel:+136745677554"]::before {
     .carousel__cards .pets__card:last-child {
         display: none;
     }
-
 }
 
 @media (max-width: 768px) {
