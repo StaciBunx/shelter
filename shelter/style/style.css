@@ -764,6 +764,23 @@ a[href="tel:+136745677554"]::before {
     margin-right: 15px;
 }
 
+@media (max-width: 860px) {
+
+    .carousel {
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .center {
@@ -870,19 +887,6 @@ a[href="tel:+136745677554"]::before {
         padding-top: 39px;
     }
 
-    .carousel {
-        position: relative;
-        justify-content: center;
-    }
-
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-
     /*
     .carousel__control_left {
         position: relative;
@@ -896,6 +900,7 @@ a[href="tel:+136745677554"]::before {
  */
 }
 
+
 @media (max-width: 750px) {
     .carousel {
         flex-wrap: wrap;
@@ -906,7 +911,10 @@ a[href="tel:+136745677554"]::before {
     .carousel__cards {
         order: -1;
         justify-content: center;
+    }
 
+    .carousel__cards .pets__card:not(:first-child) {
+        display: none;
     }
 }
 
