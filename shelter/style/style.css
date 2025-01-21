@@ -885,20 +885,7 @@ a[href="tel:+136745677554"]::before {
     .pets__pagination {
         padding-top: 39px;
     }
-
-    /*
-    .carousel__control_left {
-        position: relative;
-        left: 20px;
-    }
-
-    .carousel__control_right {
-        position: relative;
-        right: 20px;
-    }
- */
 }
-
 
 @media (max-width: 750px) {
     .carousel {
@@ -918,21 +905,34 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media (max-width: 320px) {
+
     .center {
         max-width: 300px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .top::after {
+        min-height: 823px;
+    }
+
+    .top-wrapper {
+        justify-content: normal;
+        gap: 105px;
+        min-height: 673px;
     }
 
     .top-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .top__image {
-        max-height: 260px;
+        display: grid;
     }
 
     .top-content__button {
-        justify-self: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .top__image {
+        max-height: 271px;
     }
 
     .heading {
@@ -946,7 +946,6 @@ a[href="tel:+136745677554"]::before {
 
     .heading_M {
         font-size: 25px;
-
     }
 
     .heading_XS {
@@ -964,7 +963,6 @@ a[href="tel:+136745677554"]::before {
     .navigation__list {
         display: none;
     }
-
 
     .top__text {
         text-align: center;
@@ -1021,14 +1019,6 @@ a[href="tel:+136745677554"]::before {
         top: auto;
         bottom: 94px;
     }
-
-    /* .carousel__control_left {
-        left: 43px;
-    }
-
-    .carousel__control_right {
-        right: 43px;
-    } */
 
     .help {
         padding: 42px 0 37px;
@@ -1087,7 +1077,7 @@ a[href="tel:+136745677554"]::before {
         text-align: justify;
     }
 
-    .footer {
+    /* .footer {
         padding-top: 30px;
     }
 
@@ -1133,7 +1123,7 @@ a[href="tel:+136745677554"]::before {
 
     .footer__address address:first-of-type::before {
         top: 9px;
-    }
+    } */
 
     .pets-catalog {
         padding: 42px 0;
