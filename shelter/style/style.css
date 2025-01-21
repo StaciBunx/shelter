@@ -555,7 +555,6 @@ a[href="tel:+136745677554"]::before {
     border-color: #fddcc4;
 }
 
-
 /* Pets Catalog */
 
 .pets__cards {
@@ -884,6 +883,7 @@ a[href="tel:+136745677554"]::before {
         display: none;
     }
 
+    /*
     .carousel__control_left {
         position: relative;
         left: 20px;
@@ -893,11 +893,24 @@ a[href="tel:+136745677554"]::before {
         position: relative;
         right: 20px;
     }
-
-
+ */
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 750px) {
+    .carousel {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 80px;
+    }
+
+    .carousel__cards {
+        order: -1;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 320px) {
     .center {
         max-width: 300px;
     }
@@ -1002,13 +1015,13 @@ a[href="tel:+136745677554"]::before {
         bottom: 94px;
     }
 
-    .carousel__control_left {
+    /* .carousel__control_left {
         left: 43px;
     }
 
     .carousel__control_right {
         right: 43px;
-    }
+    } */
 
     .help {
         padding: 42px 0 37px;
