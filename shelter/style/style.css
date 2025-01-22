@@ -734,11 +734,11 @@ a[href="tel:+136745677554"]::before {
     max-height: 261px;
 }
 
-.donation__content {
+.donation-content {
     display: flex;
     flex-direction: column;
     gap: 19px;
-    width: 380px;
+    max-width: 380px;
 }
 
 .donation__banking {
@@ -1057,11 +1057,13 @@ a[href="tel:+136745677554"]::before {
     }
 
     .donation-wrapper {
+        flex-direction: column;
         justify-content: center;
         gap: 42px;
     }
 
-    .donation__content {
+    .donation-content {
+        order: -1;
         align-items: center;
         gap: 24px;
         padding: 0 10px;
