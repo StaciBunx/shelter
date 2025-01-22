@@ -1084,11 +1084,6 @@ a[href="tel:+136745677554"]::before {
         margin-bottom: 42px;
     }
 
-    .carousel {
-        /* flex-direction: row; */
-        /* max-width: 320px; */
-    }
-
     .carousel__cards .pets__card:not(:first-child) {
         display: none;
     }
@@ -1098,6 +1093,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .carousel__button {
+        padding: 15px 45px;
         margin-top: 38px;
     }
 
@@ -1151,7 +1147,7 @@ a[href="tel:+136745677554"]::before {
     .footer-content {
         flex-direction: column;
         width: 300px;
-        padding-top: 0;
+        padding: 0;
         gap: 40px;
         align-items: center;
     }
