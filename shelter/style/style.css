@@ -1095,6 +1095,7 @@ a[href="tel:+136745677554"]::before {
     .footer-wrapper {
         flex-direction: column;
         flex-wrap: nowrap;
+        row-gap: 0;
     }
 
     .footer-content {
@@ -1102,6 +1103,7 @@ a[href="tel:+136745677554"]::before {
         width: 300px;
         padding-top: 0;
         gap: 40px;
+        align-items: center;
     }
 
     .footer__address {
@@ -1116,8 +1118,8 @@ a[href="tel:+136745677554"]::before {
 
     .footer__contacts {
         align-items: center;
+        gap: 44px;
     }
-
 
     a[href="mailto:email@shelter.com"]::before {
         margin-top: -5px;
@@ -1139,6 +1141,15 @@ a[href="tel:+136745677554"]::before {
 
     .footer__address address:first-of-type::before {
         top: 9px;
+    }
+
+
+    .footer__image-wrapper {
+        margin-top: 45px;
+    }
+
+    .footer__image {
+        max-height: 269px;
     }
 
     /* .pets-catalog {
