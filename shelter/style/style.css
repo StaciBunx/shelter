@@ -800,6 +800,7 @@ a[href="tel:+136745677554"]::before {
 
     .top-content__button {
         justify-self: center;
+        padding-top: 12px;
     }
 
     .top__image-wrapper {
@@ -807,7 +808,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top__image {
-        max-height: 593px;
+        max-height: 592px;
     }
 
     .about {
@@ -824,12 +825,47 @@ a[href="tel:+136745677554"]::before {
         order: -1;
     }
 
+    .carousel {
+        column-gap: 1.5%;
+    }
+
+    .pets__card__button {
+        padding: 14px 42px;
+    }
+
+    .carousel__button {
+        padding: 13px 43px;
+        margin-top: 59px;
+    }
+
+    .donation-wrapper {
+        gap: 53px;
+    }
+
+    .donation__banking {
+        padding-top: 10px;
+        height: 45px;
+    }
+
     .footer-wrapper {
         padding-top: 30px;
         flex-wrap: wrap;
         column-gap: 60px;
-        row-gap: 65px;
         justify-content: center;
+    }
+
+    .footer-content {
+        padding: 0 34px 0;
+        gap: 9%;
+    }
+
+    .footer__address {
+        padding-bottom: 0;
+    }
+
+    .footer__contacts {
+        gap: 44px;
+        padding-bottom: 0;
     }
 
     .footer__address .footer__heading {
@@ -843,6 +879,10 @@ a[href="tel:+136745677554"]::before {
 
     a[href="tel:+136745677554"]::before {
         margin-top: -3px;
+    }
+
+    .footer__image-wrapper {
+        margin-top: 64px;
     }
 
     .help__list {
