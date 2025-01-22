@@ -587,7 +587,7 @@ a[href="tel:+136745677554"]::before {
 
 .carousel__cards {
     display: flex;
-    width: 990px;
+    max-width: 990px;
     gap: 4%;
     justify-content: space-between;
 }
@@ -1008,20 +1008,20 @@ a[href="tel:+136745677554"]::before {
     }
 
     .carousel {
-        flex-direction: column;
+        flex-direction: row;
+        max-width: 320px;
     }
 
     .carousel__cards .pets__card:not(:first-child) {
         display: none;
     }
 
-    .carousel__button {
-        margin-top: 114px;
+    .carousel__control {
+        width: 52px;
     }
 
-    .carousel__control {
-        top: auto;
-        bottom: 94px;
+    .carousel__button {
+        margin-top: 42px;
     }
 
     .help {
