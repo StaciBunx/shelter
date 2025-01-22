@@ -335,7 +335,7 @@ img {
     min-height: 350px;
 }
 
-.footer__content {
+.footer-content {
     display: flex;
     width: 740px;
     padding-top: 56px;
@@ -1079,6 +1079,15 @@ a[href="tel:+136745677554"]::before {
     .text_legal {
         margin-top: -5px;
         text-align: justify;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .footer-content {
+        flex-direction: column;
     }
 
     /* .footer {
