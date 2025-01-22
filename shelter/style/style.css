@@ -905,6 +905,11 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media (max-width: 320px) {
+    .center {
+        max-width: 300px;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     .heading {
         text-align: center;
@@ -933,12 +938,6 @@ a[href="tel:+136745677554"]::before {
 
     .navigation__list {
         display: none;
-    }
-
-    .center {
-        max-width: 300px;
-        padding-right: 0;
-        padding-left: 0;
     }
 
     .top::after {
