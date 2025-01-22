@@ -1052,12 +1052,13 @@ a[href="tel:+136745677554"]::before {
     }
 
     .donation {
-        padding: 42px 0;
+        padding-top: 43px;
+        padding-bottom: 42px;
     }
 
     .donation-wrapper {
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         gap: 42px;
     }
 
@@ -1075,6 +1076,15 @@ a[href="tel:+136745677554"]::before {
     .donation__banking {
         width: 281px;
         height: 43px;
+        padding-top: 9px;
+    }
+
+    .donation__image-wrapper {
+        padding-top: 0;
+    }
+
+    .donation__image {
+        max-height: 135px;
     }
 
     .text_legal {
