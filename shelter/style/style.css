@@ -922,6 +922,14 @@ a[href="tel:+136745677554"]::before {
         width: 270px;
     }
 
+    .pets-catalog {
+        padding-top: 80px;
+    }
+
+    .pets__heading {
+        margin-bottom: 30px;
+    }
+
     .pets-catalog .pets__card:nth-last-child(1),
     .pets-catalog .pets__card:nth-last-child(2) {
         display: none;
