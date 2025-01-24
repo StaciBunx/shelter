@@ -1206,7 +1206,7 @@ a[href="tel:+136745677554"]::before {
         max-height: 269px;
     }
 
-    /* .pets-catalog {
+    .pets-catalog {
         padding: 42px 0;
     }
 
@@ -1220,9 +1220,9 @@ a[href="tel:+136745677554"]::before {
 
     .pets__pagination {
         padding-top: 42px;
-    } */
-    /*
+    }
+
     .pagination__list {
         gap: 10px;
-    } */
+    }
 }
