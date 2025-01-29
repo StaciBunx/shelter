@@ -941,6 +941,11 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media (max-width: 750px) {
+
+    .navigation__list {
+        gap: 5%;
+    }
+
     .carousel {
         flex-wrap: wrap;
         row-gap: 20px;
@@ -957,6 +962,19 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media (max-width: 640px) {
+
+    .header-wrapper {
+        padding: 0 10px;
+    }
+
+    .navigation__burger {
+        display: block;
+    }
+
+    .navigation__list {
+        display: none;
+    }
+
     .carousel__cards .pets__card:not(:first-child) {
         display: none;
     }
@@ -1014,20 +1032,12 @@ a[href="tel:+136745677554"]::before {
         letter-spacing: 0;
     }
 
-    .header-wrapper {
-        padding: 0 10px;
-    }
-
-    .navigation__burger {
-        display: block;
-    }
-
-    .navigation__list {
-        display: none;
-    }
-
     .top::after {
         min-height: 823px;
+    }
+
+    .header-wrapper {
+        padding: 0 10px;
     }
 
     .top-wrapper {
