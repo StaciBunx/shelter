@@ -1235,4 +1235,26 @@ a[href="tel:+136745677554"]::before {
     .pagination__list {
         gap: 10px;
     }
+
+}
+
+@media (max-width: 319px) {
+    .heading_L {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+
+    .heading_M {
+        font-size: 20px;
+    }
+
+    .text,
+    .text_legal {
+        font-size: 10px;
+    }
+
+    .pagination__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
