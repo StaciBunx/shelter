@@ -1182,7 +1182,6 @@ a[href="tel:+136745677554"]::before {
 
     .footer__contacts {
         align-items: center;
-        gap: 44px;
     }
 
     a[href="mailto:email@shelter.com"]::before {
@@ -1191,7 +1190,7 @@ a[href="tel:+136745677554"]::before {
 
     .footer__address .footer__heading {
         margin-bottom: 38px;
-        width: 270px;
+        max-width: 270px;
         align-self: center;
     }
 
@@ -1248,13 +1247,63 @@ a[href="tel:+136745677554"]::before {
         font-size: 20px;
     }
 
+    .heading_S {
+        font-size: 16px;
+    }
+
     .text,
     .text_legal {
         font-size: 10px;
     }
 
+    .logo__title {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    .logo__subtitle {
+        font-size: 0.6em;
+    }
+
+    .pets__card {
+        max-width: 220px;
+    }
+
     .pagination__list {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .footer-wrapper {
+        align-items: center;
+    }
+
+    .footer-content {
+        max-width: 220px;
+        align-items: center;
+    }
+
+    a[href="mailto:email@shelter.com"],
+    a[href="tel:+136745677554"] {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    a[href="mailto:email@shelter.com"]::before,
+    a[href="tel:+136745677554"]::before {
+        margin: 0;
+    }
+
+    .footer__address address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .footer__address address::before {
+        position: static;
     }
 }
