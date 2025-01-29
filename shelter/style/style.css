@@ -764,23 +764,7 @@ a[href="tel:+136745677554"]::before {
     margin-right: 15px;
 }
 
-@media (max-width: 860px) {
-
-    .carousel {
-        position: relative;
-        justify-content: center;
-    }
-
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 960px) {
 
     .center {
         max-width: 768px;
@@ -788,7 +772,6 @@ a[href="tel:+136745677554"]::before {
     }
 
     .top-wrapper {
-        padding-top: 30px;
         flex-direction: column;
         align-items: center;
     }
@@ -811,40 +794,10 @@ a[href="tel:+136745677554"]::before {
         max-height: 592px;
     }
 
-    .about {
-        padding-top: 66px;
-    }
-
-    .about-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 80px;
-    }
-
-    .about-content {
-        order: -1;
-    }
-
-    .carousel {
-        column-gap: 1.5%;
-    }
-
-    .pets__card__button {
-        padding: 14px 42px;
-    }
-
-    .carousel__button {
-        padding: 13px 43px;
-        margin-top: 59px;
-    }
-
-    .donation-wrapper {
-        gap: 53px;
-    }
-
-    .donation__banking {
-        padding-top: 10px;
-        height: 45px;
+    .pets,
+    .pets-catalog {
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 
     .footer-wrapper {
@@ -884,6 +837,63 @@ a[href="tel:+136745677554"]::before {
     .footer__image-wrapper {
         margin-top: 64px;
     }
+}
+
+@media (max-width: 860px) {
+
+    .carousel {
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .about {
+        padding-top: 66px;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .about-content {
+        order: -1;
+    }
+
+    .carousel {
+        column-gap: 1.5%;
+    }
+
+    .pets__card__button {
+        padding: 14px 42px;
+    }
+
+    .carousel__button {
+        padding: 13px 43px;
+        margin-top: 59px;
+    }
+
+    .donation-wrapper {
+        gap: 53px;
+    }
+
+    .donation__banking {
+        padding-top: 10px;
+        height: 45px;
+    }
 
     .help__list {
         width: 630px;
@@ -909,21 +919,12 @@ a[href="tel:+136745677554"]::before {
         order: -1;
     }
 
-    .pets {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-
     .pets-catalog {
         padding-bottom: 76px;
     }
 
     .pets__card {
         width: 270px;
-    }
-
-    .pets-catalog {
-        padding-top: 80px;
     }
 
     .pets__heading {
