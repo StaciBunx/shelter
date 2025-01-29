@@ -941,7 +941,15 @@ a[href="tel:+136745677554"]::before {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767px) {
+
+    .navigation__burger {
+        display: block;
+    }
+
+    .navigation__list {
+        display: none;
+    }
 
     .navigation__list {
         gap: 5%;
@@ -966,14 +974,6 @@ a[href="tel:+136745677554"]::before {
 
     .header-wrapper {
         padding: 0 10px;
-    }
-
-    .navigation__burger {
-        display: block;
-    }
-
-    .navigation__list {
-        display: none;
     }
 
     .carousel__cards .pets__card:not(:first-child) {
