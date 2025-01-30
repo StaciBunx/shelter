@@ -278,6 +278,8 @@ img {
     align-items: center;
 }
 
+.header__navigation {}
+
 .burger-menu {
     position: relative;
     display: none;
@@ -962,7 +964,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .navigation__list {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -320px;
         display: flex;
@@ -973,12 +975,12 @@ a[href="tel:+136745677554"]::before {
         z-index: 10;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
+        transform: translateX(0);
         transition: all 0.3s ease;
     }
 
     .navigation__list_opened {
-        right: 0;
+        transform: translateX(-100%);
     }
 
     .burger_opened {
