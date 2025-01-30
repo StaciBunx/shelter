@@ -973,6 +973,7 @@ a[href="tel:+136745677554"]::before {
         z-index: 10;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         transition: all 0.3s ease;
     }
 
@@ -981,7 +982,7 @@ a[href="tel:+136745677554"]::before {
     }
 
     .burger_opened {
-        rotate: -90deg;
+        transform: rotate(-90deg);
     }
 
     .navigation__link {
