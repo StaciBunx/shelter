@@ -977,6 +977,10 @@ a[href="tel:+136745677554"]::before {
         right: 0;
     }
 
+    .navigation__link {
+        font-size: 32px;
+    }
+
     .carousel {
         flex-wrap: wrap;
         row-gap: 20px;
