@@ -279,12 +279,14 @@ img {
 }
 
 .burger-menu {
+    position: relative;
     display: none;
     flex-direction: column;
     cursor: pointer;
     width: 30px;
     height: 30px;
     gap: 8px;
+    z-index: 11;
 }
 
 .burger-line {
@@ -959,11 +961,20 @@ a[href="tel:+136745677554"]::before {
     }
 
     .navigation__list {
-        display: none;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #292929;
+        width: 320px;
+        height: 100%;
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
     }
 
-    .navigation__list {
-        gap: 5%;
+    .navigation__list_opened {
+        right: 0;
     }
 
     .carousel {
