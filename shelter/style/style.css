@@ -958,11 +958,13 @@ a[href="tel:+136745677554"]::before {
 
     .burger-menu {
         display: flex;
+        transition: all 0.3s ease;
     }
 
     .navigation__list {
         position: absolute;
         top: 0;
+        right: -320px;
         display: flex;
         flex-direction: column;
         background-color: #292929;
@@ -975,6 +977,10 @@ a[href="tel:+136745677554"]::before {
 
     .navigation__list_opened {
         right: 0;
+    }
+
+    .burger_opened {
+        rotate: -90deg;
     }
 
     .navigation__link {
