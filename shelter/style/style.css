@@ -278,8 +278,19 @@ img {
     align-items: center;
 }
 
-.navigation__burger {
+.burger-menu {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    gap: 8px;
+}
+
+.burger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #f1cdb3;
 }
 
 .navigation__list {
@@ -943,8 +954,8 @@ a[href="tel:+136745677554"]::before {
 
 @media (max-width: 767px) {
 
-    .navigation__burger {
-        display: block;
+    .burger-menu {
+        display: flex;
     }
 
     .navigation__list {
