@@ -973,6 +973,7 @@ a[href="tel:+136745677554"]::before {
         z-index: 10;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s ease;
     }
 
     .navigation__list_opened {
