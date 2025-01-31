@@ -79,6 +79,10 @@ img {
     min-height: 100%;
 }
 
+.page__body.no-scroll {
+    overflow: hidden;
+}
+
 .page__main {
     flex-grow: 1;
 }
