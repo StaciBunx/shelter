@@ -315,18 +315,19 @@ img {
 
 .navigation__link {
     transition: all 0.3s linear;
+    color: #cdcdcd;
 }
 
-.navigation__link_light {
-    color: #cdcdcd;
+.navigation__link_current {
+    color: #fafafa;
 }
 
 .navigation__link_dark {
     color: #545454;
 }
 
-.navigation__link_current {
-    color: #fafafa;
+.navigation__link_dark.navigation__link_current {
+    color: #292929;
 }
 
 .navigation__link_current::after {
@@ -337,7 +338,7 @@ img {
     background-color: #f1cdb3;
 }
 
-.navigation__link_light:hover {
+.navigation__link:hover {
     color: #fafafa;
 }
 
@@ -1019,11 +1020,11 @@ a[href="tel:+136745677554"]::before {
         color: #cdcdcd;
     }
 
-    .navigation__link_current {
+    .navigation__link:hover {
         color: #fafafa;
     }
 
-    .navigation__link:hover {
+    .navigation__link_dark.navigation__link_current {
         color: #fafafa;
     }
 
