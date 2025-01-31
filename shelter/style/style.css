@@ -307,8 +307,6 @@ img {
     z-index: 11;
 }
 
-
-
 .navigation__list {
     display: flex;
     gap: 35px;
@@ -1018,6 +1016,15 @@ a[href="tel:+136745677554"]::before {
 
     .navigation__link {
         font-size: 32px;
+        color: #cdcdcd;
+    }
+
+    .navigation__link_current {
+        color: #fafafa;
+    }
+
+    .navigation__link:hover {
+        color: #fafafa;
     }
 
     .carousel {
