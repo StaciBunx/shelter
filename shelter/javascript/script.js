@@ -33,5 +33,36 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.remove('no-scroll');
         });
     });
-
 });
+
+
+async function loadPetsData () {
+    try {
+        const response = await fetch('./data/pets.json');
+        if (!response.ok) {
+            throw new Error('Ошибка загрузки данных c pets JSON');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Ошибка: ', error);
+    }
+}
+
+function renderPetCard (data) {
+    const cardsContainer = document.querySelector('.carousel__cards');
+    data.forEach(({ img, name, type }) => {
+        const card = `
+    <article class="pets__card">
+    <img class="pets__image" src="${img}" alt="${name}, ${type}" width="270" height="270">
+    <h4 class="heading heading_S">${name}</h4>
+    <a class="button button_light pets__card__button" href="#">Learn more</a>
+    </article>
+    `
+        cardsContainer.insertAdjacentHTML("beforeend", card);
+    });
+}
+
+loadPetsData()
+    .then((jsondata) => renderPetCard(jsondata))
+    .catch((error) => console.log(error.message));
