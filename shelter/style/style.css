@@ -830,6 +830,20 @@ a[href="tel:+136745677554"]::before {
         padding-bottom: 100px;
     }
 
+    .carousel {
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
+    .carousel__cards .pets__card:last-child {
+        display: none;
+    }
+
+
     .footer-wrapper {
         padding-top: 30px;
         flex-wrap: wrap;
@@ -869,26 +883,7 @@ a[href="tel:+136745677554"]::before {
     }
 }
 
-@media (max-width: 860px) {
-
-    .carousel {
-        position: relative;
-        justify-content: center;
-    }
-
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-
-
-}
-
 @media (max-width: 768px) {
-
     .about {
         padding-top: 66px;
     }
