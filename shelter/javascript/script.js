@@ -34,6 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
         return array;
     }
 
+    // Function for calculation count of cards per slide
+    function getCountCardsPerSlide () {
+        if (window.innerWidth <= 640) {
+            return 1;
+        } else if (window.innerWidth <= 960) {
+            return 2;
+        } else {
+            return 3;
+        }
+    }
+
     // Function for choosing unique cards for slides
     function getUniqueCardsForSlide (data, previousCards, count) {
         const availableCards = data.filter(card => !previousCards.includes(card)); // Exclude cards from previouse slide
@@ -61,17 +72,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function for showing next slide in carousel
     function showNextSlide () {
-        const newSlide = getUniqueCardsForSlide(allPetsData, currentSlide, 3); // Get new slide with new unique cards
+        const countCardsPerSlide = getCountCardsPerSlide();
+        const newSlide = getUniqueCardsForSlide(allPetsData, currentSlide, countCardsPerSlide); // Get new slide with new unique cards
         previousSlide = currentSlide; // Save current slide as previos
         currentSlide = newSlide; // Setting current slide with new cards
         renderPetCard(currentSlide);
     }
 
-    // Function for showing next slide in carousel
+    // Function for showing previous slide in carousel
     function showPreviousSlide () {
         if (previousSlide.length === 0) return; // if there's no previous slide, do nothing
         const temp = currentSlide; // save current slide
-        currentSlide = previousSlide; // use again prev slide as current
+        currentSlide = previousSlide; // use again previous slide as current
         previousSlide = temp; // save prev slide
         renderPetCard(currentSlide);
     }
@@ -90,14 +102,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function updateCarouselOnResize () {
+        const newCountCardsPerSlide = getCountCardsPerSlide(); // Get new cards count
+
+        if (currentSlide.length > newCountCardsPerSlide) {
+            currentSlide = currentSlide.slice(0, newCountCardsPerSlide);
+        }
+        else if (currentSlide.length < newCountCardsPerSlide) {
+            const additionalCards = getUniqueCardsForSlide(allPetsData, currentSlide, newCountCardsPerSlide - currentSlide.length);
+            currentSlide = [...currentSlide, ...additionalCards];
+        }
+
+        renderPetCard(currentSlide);
+
+    }
+
     // Carousel initialization
     async function initCarousel () {
         const jsondata = await fetchPetsData();
+        const cardsCountPerSlide = getCountCardsPerSlide(); // Get initial cards count
         allPetsData = shuffleArray(jsondata);
-        currentSlide = getUniqueCardsForSlide(allPetsData, [], 3);
+        currentSlide = getUniqueCardsForSlide(allPetsData, [], cardsCountPerSlide);
+
+        // Listeners for buttons
         renderPetCard(currentSlide);
         prevButton.addEventListener('click', showPreviousSlide);
         nextButton.addEventListener('click', showNextSlide);
+
+        // Listener on window resize for carousel update
+        window.addEventListener('resize', updateCarouselOnResize);
     }
 
     // Burger-menu control
