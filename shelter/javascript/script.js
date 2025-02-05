@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         CAROUSEL_CONTAINER: '.carousel__cards',
         PREV_BUTTON: '.carousel__control_left',
         NEXT_BUTTON: '.carousel__control_right',
+
+        PETS_CATALOG_CONTAINER: '.pets__cards',
     };
 
     // DOM elements
@@ -16,9 +18,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector(SELECTORS.MENU);
     const overlay = document.querySelector(SELECTORS.OVERLAY);
     const body = document.querySelector(SELECTORS.BODY);
+
     const carouselContainer = document.querySelector(SELECTORS.CAROUSEL_CONTAINER);
     const prevButton = document.querySelector(SELECTORS.PREV_BUTTON);
     const nextButton = document.querySelector(SELECTORS.NEXT_BUTTON);
+
+    const catalogContainer = document.querySelector(SELECTORS.PETS_CATALOG_CONTAINER);
+
+
+    // Burger-menu control
+    function initBurgerMenu () {
+        // Open/close by click on icon
+        burgerMenu.addEventListener('click', function () {
+            burgerMenu.classList.toggle('burger_opened');
+            menu.classList.toggle('navigation__list_opened');
+            overlay.classList.toggle('overlay_active');
+            body.classList.toggle('no-scroll');
+        });
+
+        // Close menu by click on overlay
+        overlay.addEventListener('click', function () {
+            burgerMenu.classList.remove('burger_opened');
+            menu.classList.remove('navigation__list_opened');
+            overlay.classList.remove('overlay_active');
+            body.classList.remove('no-scroll');
+        });
+
+        // Close menu by click on menu link
+        menu.addEventListener('click', function (event) {
+            if (event.target.classList.contains('navigation__link')) {
+                burgerMenu.classList.remove('burger_opened');
+                menu.classList.remove('navigation__list_opened');
+                overlay.classList.remove('overlay_active');
+                body.classList.remove('no-scroll');
+            }
+        });
+    }
 
     // Carousel states
     let allPetsData = [];
@@ -52,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Function for rending cards
-    function renderPetCard (cards) {
+    function renderPetCard (container, cards) {
         const fragment = document.createDocumentFragment();
 
         cards.forEach(({ img, name, type }) => {
@@ -66,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
             fragment.appendChild(card);
         });
 
-        carouselContainer.innerHTML = '';
-        carouselContainer.appendChild(fragment);
+        container.innerHTML = '';
+        container.appendChild(fragment);
     }
 
     // Function for showing next slide in carousel
@@ -114,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         renderPetCard(currentSlide);
-
     }
 
     // Carousel initialization
@@ -123,9 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardsCountPerSlide = getCountCardsPerSlide(); // Get initial cards count
         allPetsData = shuffleArray(jsondata);
         currentSlide = getUniqueCardsForSlide(allPetsData, [], cardsCountPerSlide);
+        renderPetCard(carouselContainer, currentSlide);
 
         // Listeners for buttons
-        renderPetCard(currentSlide);
         prevButton.addEventListener('click', showPreviousSlide);
         nextButton.addEventListener('click', showNextSlide);
 
@@ -133,36 +167,34 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', updateCarouselOnResize);
     }
 
-    // Burger-menu control
-    function initBurgerMenu () {
-        // Open/close by click on icon
-        burgerMenu.addEventListener('click', function () {
-            burgerMenu.classList.toggle('burger_opened');
-            menu.classList.toggle('navigation__list_opened');
-            overlay.classList.toggle('overlay_active');
-            body.classList.toggle('no-scroll');
-        });
+    //Catalog states
+    let allPetsDataCatalog = [];
+    let currentPage = [];
 
-        // Close menu by click on overlay
-        overlay.addEventListener('click', function () {
-            burgerMenu.classList.remove('burger_opened');
-            menu.classList.remove('navigation__list_opened');
-            overlay.classList.remove('overlay_active');
-            body.classList.remove('no-scroll');
-        });
 
-        // Close menu by click on menu link
-        menu.addEventListener('click', function (event) {
-            if (event.target.classList.contains('navigation__link')) {
-                burgerMenu.classList.remove('burger_opened');
-                menu.classList.remove('navigation__list_opened');
-                overlay.classList.remove('overlay_active');
-                body.classList.remove('no-scroll');
-            }
-        });
+    // Function for calculation count of cards per page size
+    function getCountCardsForCatalog () {
+        if (window.innerWidth <= 320) {
+            return 3;
+        } else if (window.innerWidth <= 768) {
+            return 6;
+        } else {
+            return 8;
+        }
+    }
+    //Catalog initialization
+    async function initCatalog () {
+        const jsondata = await fetchPetsData();
+        const cardsCountForCatalog = getCountCardsForCatalog();
+        allPetsDataCatalog = [...Array(6)].flatMap(() => shuffleArray(jsondata));
+        currentPage = allPetsDataCatalog.slice(0, cardsCountForCatalog);
+        renderPetCard(catalogContainer, currentPage);
+        //Listeners for pagination
+
     }
 
     // Initialization
     initBurgerMenu();
     initCarousel();
+    initCatalog();
 });
