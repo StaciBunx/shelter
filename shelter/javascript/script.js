@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
         NEXT_BUTTON: '.carousel__control_right',
 
         PETS_CATALOG_CONTAINER: '.pets__cards',
+        PAGINATION_PREV: '.pagination__prev',
+        PAGINATION_NEXT: '.pagination__next',
+        PAGINATION_FIRST: '.pagination__first',
+        PAGINATION_LAST: '.pagination__last',
+        PAGINATION_CURRENT: '.pagination__current'
     };
 
     // DOM elements
@@ -137,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Function for update Catalog on resize
     function updateCarouselOnResize () {
         const newCountCardsPerSlide = getCountCardsPerSlide(); // Get new cards count
 
@@ -170,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //Catalog states
     let allPetsDataCatalog = [];
     let currentPage = [];
+    let totalPages = 0;
 
 
     // Function for calculation count of cards per page size
@@ -182,10 +189,35 @@ document.addEventListener('DOMContentLoaded', function () {
             return 8;
         }
     }
+
+    //Function for calculation count of pages depending on window size
+    function getTotalPages (params) {
+        if (window.innerWidth <= 320) {
+            return 16;
+        } else if (window.innerWidth <= 768) {
+            return 8;
+        } else {
+            return 6;
+        }
+    }
+
+
+    function (params) {
+
+    }
+
+    //Function for update Catalog on resize
+    function updateCatalogOnResize (params) {
+        const newCountCardsPerCatalog = getCountCardsForCatalog() //Get new cards count
+
+
+    }
+
     //Catalog initialization
     async function initCatalog () {
         const jsondata = await fetchPetsData();
-        const cardsCountForCatalog = getCountCardsForCatalog();
+        // const cardsCountForCatalog = getCountCardsForCatalog();
+        const totalPages = getTotalPages();
         allPetsDataCatalog = [...Array(6)].flatMap(() => shuffleArray(jsondata));
         currentPage = allPetsDataCatalog.slice(0, cardsCountForCatalog);
         renderPetCard(catalogContainer, currentPage);
