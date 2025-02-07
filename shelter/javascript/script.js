@@ -207,6 +207,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return 6;
         }
     }
+    // Function for updating pagination buttons state
+    function updatePaginationButtons () {
+        paginationFirst.disabled = currentPageNumber === 1 ? true : false;
+        paginationPrev.disabled = currentPageNumber === 1 ? true : false;
+        paginationNext.disabled = currentPageNumber === totalPages ? true : false;
+        paginationLast.disabled = currentPageNumber === totalPages ? true : false;
+    }
 
     //Function for update Catalog on resize
     function updateCatalogOnResize (params) {
