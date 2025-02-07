@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextButton = document.querySelector(SELECTORS.NEXT_BUTTON);
 
     const catalogContainer = document.querySelector(SELECTORS.PETS_CATALOG_CONTAINER);
+    const paginationPrev = document.querySelector(SELECTORS.PAGINATION_PREV);
+    const paginationNext = document.querySelector(SELECTORS.PAGINATION_NEXT);
+    const paginationFirst = document.querySelector(SELECTORS.PAGINATION_FIRST);
+    const paginationLast = document.querySelector(SELECTORS.PAGINATION_LAST);
+    const paginationCurrent = document.querySelector(SELECTORS.PAGINATION_CURRENT);
 
 
     // Burger-menu control
@@ -65,6 +70,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = [];
     let previousSlide = [];
 
+
+    // Fetch data from JSON
+    async function fetchPetsData () {
+        try {
+            const response = await fetch('./data/pets.json');
+            if (!response.ok) {
+                throw new Error('Ошибка загрузки данных c pets JSON');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Ошибка: ', error);
+        }
+    }
+
     // Function for shuffling array with pets data
     function shuffleArray (array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -74,7 +94,26 @@ document.addEventListener('DOMContentLoaded', function () {
         return array;
     }
 
-    // Function for calculation count of cards per slide
+    // Function for rending cards
+    function renderPetCard (container, cards) {
+        const fragment = document.createDocumentFragment();
+
+        cards.forEach(({ img, name, type }) => {
+            const card = document.createElement('article');
+            card.classList.add('pets__card');
+            card.innerHTML = `
+                    <img class="pets__image" src="${img}" alt="${name}, ${type}" width="270" height="270">
+                    <h4 class="heading heading_S">${name}</h4>
+                    <a class="button button_light pets__card__button" href="#">Learn more</a>
+                `;
+            fragment.appendChild(card);
+        });
+
+        container.innerHTML = '';
+        container.appendChild(fragment);
+    }
+
+    // Function for calculation count of cards per slide depending on window size
     function getCountCardsPerSlide () {
         if (window.innerWidth <= 640) {
             return 1;
@@ -89,25 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function getUniqueCardsForSlide (data, previousCards, count) {
         const availableCards = data.filter(card => !previousCards.includes(card)); // Exclude cards from previouse slide
         return shuffleArray(availableCards).slice(0, count); // Get random cards
-    }
-
-    // Function for rending cards
-    function renderPetCard (container, cards) {
-        const fragment = document.createDocumentFragment();
-
-        cards.forEach(({ img, name, type }) => {
-            const card = document.createElement('article');
-            card.classList.add('pets__card');
-            card.innerHTML = `
-                <img class="pets__image" src="${img}" alt="${name}, ${type}" width="270" height="270">
-                <h4 class="heading heading_S">${name}</h4>
-                <a class="button button_light pets__card__button" href="#">Learn more</a>
-            `;
-            fragment.appendChild(card);
-        });
-
-        container.innerHTML = '';
-        container.appendChild(fragment);
     }
 
     // Function for showing next slide in carousel
@@ -126,20 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
         currentSlide = previousSlide; // use again previous slide as current
         previousSlide = temp; // save prev slide
         renderPetCard(currentSlide);
-    }
-
-    // Fetch data from JSON
-    async function fetchPetsData () {
-        try {
-            const response = await fetch('./data/pets.json');
-            if (!response.ok) {
-                throw new Error('Ошибка загрузки данных c pets JSON');
-            }
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Ошибка: ', error);
-        }
     }
 
     // Function for update Catalog on resize
@@ -175,8 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Catalog states
     let allPetsDataCatalog = [];
-    let currentPage = [];
+    let currentPageNumber = 1;
     let totalPages = 0;
+    let cardsPerPage = 0;
 
 
     // Function for calculation count of cards per page size
@@ -199,11 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             return 6;
         }
-    }
-
-
-    function (params) {
-
     }
 
     //Function for update Catalog on resize
