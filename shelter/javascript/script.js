@@ -1,11 +1,10 @@
+import { initBurgerMenu } from './modules/common.js';
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // Selectors constants
     const SELECTORS = {
-        BURGER_MENU: '#burgerMenu',
-        MENU: '.navigation__list',
-        OVERLAY: '#overlay',
-        BODY: '.page__body',
         CAROUSEL_CONTAINER: '.carousel__cards',
         PREV_BUTTON: '.carousel__control_left',
         NEXT_BUTTON: '.carousel__control_right',
@@ -19,11 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // DOM elements
-    const burgerMenu = document.querySelector(SELECTORS.BURGER_MENU);
-    const menu = document.querySelector(SELECTORS.MENU);
-    const overlay = document.querySelector(SELECTORS.OVERLAY);
-    const body = document.querySelector(SELECTORS.BODY);
-
     const carouselContainer = document.querySelector(SELECTORS.CAROUSEL_CONTAINER);
     const prevButton = document.querySelector(SELECTORS.PREV_BUTTON);
     const nextButton = document.querySelector(SELECTORS.NEXT_BUTTON);
@@ -34,36 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const paginationFirst = document.querySelector(SELECTORS.PAGINATION_FIRST);
     const paginationLast = document.querySelector(SELECTORS.PAGINATION_LAST);
     const paginationCurrent = document.querySelector(SELECTORS.PAGINATION_CURRENT);
-
-
-    // Burger-menu control
-    function initBurgerMenu () {
-        // Open/close by click on icon
-        burgerMenu.addEventListener('click', function () {
-            burgerMenu.classList.toggle('burger_opened');
-            menu.classList.toggle('navigation__list_opened');
-            overlay.classList.toggle('overlay_active');
-            body.classList.toggle('no-scroll');
-        });
-
-        // Close menu by click on overlay
-        overlay.addEventListener('click', function () {
-            burgerMenu.classList.remove('burger_opened');
-            menu.classList.remove('navigation__list_opened');
-            overlay.classList.remove('overlay_active');
-            body.classList.remove('no-scroll');
-        });
-
-        // Close menu by click on menu link
-        menu.addEventListener('click', function (event) {
-            if (event.target.classList.contains('navigation__link')) {
-                burgerMenu.classList.remove('burger_opened');
-                menu.classList.remove('navigation__list_opened');
-                overlay.classList.remove('overlay_active');
-                body.classList.remove('no-scroll');
-            }
-        });
-    }
 
     // Carousel states
     let allPetsData = [];
