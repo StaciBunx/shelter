@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //Function for calculation count of pages depending on window size
-    function getTotalPages (params) {
+    function getTotalPages () {
         if (window.innerWidth <= 320) {
             return 16;
         } else if (window.innerWidth <= 768) {
@@ -207,6 +207,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return 6;
         }
     }
+
+    // Function for updating pagination buttons state
+    function updatePaginationButtons () {
+        paginationFirst.disabled = currentPageNumber === 1;
+        paginationPrev.disabled = currentPageNumber === 1;
+        paginationNext.disabled = currentPageNumber === totalPages;
+        paginationLast.disabled = currentPageNumber === totalPages;
+    }
+
     // Function for updating pagination buttons state
     function updatePaginationButtons () {
         paginationFirst.disabled = currentPageNumber === 1 ? true : false;
