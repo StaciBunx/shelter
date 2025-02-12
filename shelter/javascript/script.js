@@ -211,10 +211,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function for updating pagination buttons state
     function updatePaginationButtonsState () {
-        paginationFirst.disabled = currentPageNumber === 1 ? true : false;
-        paginationPrev.disabled = currentPageNumber === 1 ? true : false;
-        paginationNext.disabled = currentPageNumber === totalPages ? true : false;
-        paginationLast.disabled = currentPageNumber === totalPages ? true : false;
+        if (currentPageNumber === 1) {
+            paginationFirst.classList.add('button_small_disabled');
+            paginationPrev.classList.add('button_small_disabled');
+        }
+        else {
+            paginationFirst.classList.remove('button_small_disabled');
+            paginationPrev.classList.remove('button_small_disabled');
+        }
+        if (currentPageNumber === totalPages) {
+            paginationLast.classList.add('button_small_disabled');
+            paginationNext.classList.add('button_small_disabled');
+        } else {
+            paginationLast.classList.remove('button_small_disabled');
+            paginationNext.classList.remove('button_small_disabled');
+        }
     }
 
     function renderCurrentPage () {
