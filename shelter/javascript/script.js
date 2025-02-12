@@ -113,6 +113,24 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(fragment);
     }
 
+    // Function for showing next slide in carousel
+    function showNextSlide () {
+        const countCardsPerSlide = getCountCardsPerSlide();
+        const newSlide = getUniqueCardsForSlide(allPetsData, currentSlide, countCardsPerSlide); // Get new slide with new unique cards
+        previousSlide = currentSlide; // Save current slide as previos
+        currentSlide = newSlide; // Setting current slide with new cards
+        renderPetCard(carouselContainer, currentSlide);
+    }
+
+    // Function for showing previous slide in carousel
+    function showPreviousSlide () {
+        if (previousSlide.length === 0) return; // if there's no previous slide, do nothing
+        const temp = currentSlide; // save current slide
+        currentSlide = previousSlide; // use again previous slide as current
+        previousSlide = temp; // save prev slide
+        renderPetCard(carouselContainer, currentSlide);
+    }
+
     // Function for calculation count of cards per slide depending on window size
     function getCountCardsPerSlide () {
         if (window.innerWidth <= 640) {
@@ -128,24 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function getUniqueCardsForSlide (data, previousCards, count) {
         const availableCards = data.filter(card => !previousCards.includes(card)); // Exclude cards from previouse slide
         return shuffleArray(availableCards).slice(0, count); // Get random cards
-    }
-
-    // Function for showing next slide in carousel
-    function showNextSlide () {
-        const countCardsPerSlide = getCountCardsPerSlide();
-        const newSlide = getUniqueCardsForSlide(allPetsData, currentSlide, countCardsPerSlide); // Get new slide with new unique cards
-        previousSlide = currentSlide; // Save current slide as previos
-        currentSlide = newSlide; // Setting current slide with new cards
-        renderPetCard(currentSlide);
-    }
-
-    // Function for showing previous slide in carousel
-    function showPreviousSlide () {
-        if (previousSlide.length === 0) return; // if there's no previous slide, do nothing
-        const temp = currentSlide; // save current slide
-        currentSlide = previousSlide; // use again previous slide as current
-        previousSlide = temp; // save prev slide
-        renderPetCard(currentSlide);
     }
 
     // Function for update Catalog on resize
@@ -213,13 +213,6 @@ document.addEventListener('DOMContentLoaded', function () {
         paginationPrev.disabled = currentPageNumber === 1 ? true : false;
         paginationNext.disabled = currentPageNumber === totalPages ? true : false;
         paginationLast.disabled = currentPageNumber === totalPages ? true : false;
-    }
-
-    //Function for update Catalog on resize
-    function updateCatalogOnResize (params) {
-        const newCountCardsPerCatalog = getCountCardsForCatalog() //Get new cards count
-
-
     }
 
     //Catalog initialization
