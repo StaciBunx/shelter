@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
             currentSlide = [...currentSlide, ...additionalCards];
         }
 
-        renderPetCard(currentSlide);
+        renderPetCard(carouselContainer, currentSlide);
     }
 
     // Carousel initialization
