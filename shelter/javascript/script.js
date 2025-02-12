@@ -225,15 +225,58 @@ document.addEventListener('DOMContentLoaded', function () {
         updatePaginationButtonsState();
     }
 
+
+    // Function for going to the first page
+    function goToFirstPage () {
+        currentPageNumber = 1;
+        renderCurrentPage();
+    }
+
+    // Function for going to the previous page
+    function goToPreviousPage () {
+        if (currentPageNumber > 1) {
+            currentPageNumber--;
+            renderCurrentPage();
+        }
+    }
+
+    // Function for going to the next page
+    function goToNextPage () {
+        if (currentPageNumber < totalPages) {
+            currentPageNumber++;
+            renderCurrentPage();
+        }
+    }
+
+    // Function for going to the last page
+    function goToLastPage () {
+        currentPageNumber = totalPages;
+        renderCurrentPage();
+    }
+
+    //Function for update Catalog on resize
+    function updateCatalogOnResize () {
+        cardsPerPage = getCountCardsForCatalog();
+        totalPages = getTotalPages();
+        renderCurrentPage();
+    }
+
     //Catalog initialization
     async function initCatalog () {
         const jsondata = await fetchPetsData();
-        // const cardsCountForCatalog = getCountCardsForCatalog();
         const totalPages = getTotalPages();
         allPetsDataCatalog = [...Array(6)].flatMap(() => shuffleArray(jsondata));
-        currentPage = allPetsDataCatalog.slice(0, cardsCountForCatalog);
-        renderPetCard(catalogContainer, currentPage);
-        //Listeners for pagination
+        cardsPerPage = getCountCardsForCatalog();
+        totalPages = getTotalPages();
+        renderCurrentPage();
+
+        //Buttons listeners
+        paginationFirst.addEventListener('click', goToFirstPage);
+        paginationPrev.addEventListener('click', goToPreviousPage);
+        paginationNext.addEventListener('click', goToNextPage);
+        paginationLast.addEventListener('click', goToLastPage);
+
+        window.addEventListener('resize', updateCatalogOnResize);
 
     }
 
