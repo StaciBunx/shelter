@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Catalog states
     let allPetsDataCatalog = [];
+    let currentPage = [];
     let currentPageNumber = 1;
     let totalPages = 0;
     let cardsPerPage = 0;
@@ -264,11 +265,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //Catalog initialization
     async function initCatalog () {
         const jsondata = await fetchPetsData();
-        const totalPages = getTotalPages();
+        cardsPerPage = getCountCardsForCatalog(); // get amount of cards on page, depending on window size
+        totalPages = getTotalPages(); //get amount of pages, depending on window size
         allPetsDataCatalog = [...Array(6)].flatMap(() => shuffleArray(jsondata));
-        cardsPerPage = getCountCardsForCatalog();
-        totalPages = getTotalPages();
-        renderCurrentPage();
+        currentPage = renderCurrentPage();
 
         //Buttons listeners
         paginationFirst.addEventListener('click', goToFirstPage);
