@@ -1,5 +1,4 @@
 /* Fonts */
-
 @font-face {
     font-family: 'Arial';
     src: local('Arial Italic'), local('Arial-ItalicMT'),
@@ -40,16 +39,20 @@
     font-display: swap;
 }
 
-/* Common */
+:root {
+    --color-primary: #f1cdb3;
+    --color-primary-light: #fddcc4;
+    --color-text: #4c4c4c;
+    --color-background: #f6f6f6;
+    --font-family-primary: "Georgia", serif;
+    --font-family-secondary: "Arial", sans-serif;
+}
 
+
+/* Common */
 * {
     padding: 0;
     margin: 0;
-}
-
-*,
-*::before,
-*::after {
     box-sizing: border-box;
 }
 
@@ -73,7 +76,7 @@ img {
 }
 
 .page__body {
-    background-color: #f6f6f6;
+    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -113,7 +116,7 @@ img {
     background-color: rgba(41, 41, 41, 0.6);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 9;
 }
 
@@ -125,9 +128,8 @@ img {
 /* Text Styles */
 
 .heading {
-    font-family: "Georgia", "Times New Roman", "Times", serif;
-    font-style: normal;
-    color: #4c4c4c;
+    font-family: var(--font-family-primary);
+    color: var(--color-text);
     font-weight: 400;
     line-height: 130%;
 }
@@ -153,8 +155,8 @@ img {
 }
 
 .text {
-    font-family: "Arial", "Helvetica", sans-serif;
-    color: #4c4c4c;
+    font-family: var(--font-family-secondary);
+    color: var(--color-text);
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
@@ -174,8 +176,7 @@ img {
     min-height: 52px;
     padding: 15px 45px;
     border-radius: 100px;
-    font-family: "Georgia", "Times New Roman", "Times", serif;
-    font-style: normal;
+    font-family: var(--font-family-primary);
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
@@ -187,22 +188,22 @@ img {
 }
 
 .button_dark {
-    background-color: #f1cdb3;
+    background-color: var(--color-primary);
 }
 
 .button_light {
     background-color: #fff;
-    border-color: #f1cdb3;
+    border-color: var(--color-primary);
 }
 
 .button:hover {
-    background-color: #fddcc4;
-    border-color: #fddcc4;
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
 }
 
 .button:active {
-    background-color: #f1cdb3;
-    border-color: #f1cdb3;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .button_small {
@@ -223,26 +224,26 @@ img {
 }
 
 .button_small_disabled path {
-    fill: #CDCDCD;
+    fill: #cdcdcd;
 }
 
 .button_small_current {
-    background-color: #f1cdb3;
+    background-color: var(--color-primary);
 }
 
 .button_small:not(.button_small_disabled):hover {
-    background-color: #fddcc4;
-    border-color: #fddcc4;
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
 }
 
 .button_small:active {
-    background-color: #f1cdb3;
+    background-color: var(--color-primary);
 }
 
 .button_small:disabled {
     background-color: transparent;
-    border-color: #CDCDCD;
-    color: #CDCDCD;
+    border-color: #cdcdcd;
+    color: #cdcdcd;
 }
 
 /* Logo */
@@ -254,7 +255,7 @@ img {
 }
 
 .logo__title {
-    font-family: "Georgia", "Times New Roman", "Times", serif;
+    font-family: var(--font-family-primary);
     font-weight: 400;
     font-size: 32px;
     line-height: 110%;
@@ -263,11 +264,11 @@ img {
 }
 
 .logo__title_light {
-    color: #f1cdb3;
+    color: var(--color-primary);
 }
 
 .logo__subtitle {
-    font-family: "Arial", "Helvetica", sans-serif;
+    font-family: var(--font-family-secondary);
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.1em;
@@ -339,7 +340,7 @@ img {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #f1cdb3;
+    background-color: var(--color-primary);
 }
 
 .navigation__link:hover {
@@ -402,7 +403,7 @@ img {
 
 .footer__text {
     line-height: 117%;
-    color: #f1cdb3;
+    color: var(--color-primary);
 }
 
 .footer__address .footer__heading {
@@ -581,8 +582,8 @@ a[href="tel:+136745677554"]::before {
 }
 
 .pets__card:hover .button {
-    background-color: #fddcc4;
-    border-color: #fddcc4;
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
 }
 
 /* Pets Catalog */
@@ -630,7 +631,7 @@ a[href="tel:+136745677554"]::before {
     max-height: 52px;
     padding: 0;
     border: none;
-    background-color: #f6f6f6;
+    background-color: var(--color-background);
     cursor: pointer;
 }
 
@@ -640,24 +641,24 @@ a[href="tel:+136745677554"]::before {
 }
 
 .carousel__control:hover rect {
-    fill: #fddcc4;
-    stroke: #fddcc4;
+    fill: var(--color-primary-light);
+    stroke: var(--color-primary-light);
 }
 
 
 .carousel__control:active rect {
-    fill: #f1cdb3;
-    stroke: #f1cdb3;
+    fill: var(--color-primary);
+    stroke: var(--color-primary);
 }
 
 
 .carousel__control:disabled rect {
     fill: transparent;
-    stroke: #CDCDCD;
+    stroke: #cdcdcd;
 }
 
 .carousel__control:disabled path {
-    fill: #CDCDCD;
+    stroke: #cdcdcd;
 }
 
 /* Help */
@@ -686,8 +687,7 @@ a[href="tel:+136745677554"]::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 119px;
-    row-gap: 55px;
+    gap: 55px 119px;
 }
 
 .help__item {
@@ -777,7 +777,7 @@ a[href="tel:+136745677554"]::before {
     padding: 8px 15px;
     width: 350px;
     height: 43px;
-    background-color: #f1cdb3;
+    background-color: var(--color-primary);
 }
 
 .donation__credit-card {
@@ -830,6 +830,15 @@ a[href="tel:+136745677554"]::before {
         padding-bottom: 100px;
     }
 
+    .carousel {
+        position: relative;
+        justify-content: center;
+    }
+
+    .carousel__cards {
+        gap: 40px
+    }
+
     .footer-wrapper {
         padding-top: 30px;
         flex-wrap: wrap;
@@ -857,7 +866,6 @@ a[href="tel:+136745677554"]::before {
 
     a[href="mailto:email@shelter.com"]::before {
         margin-top: -5px;
-
     }
 
     a[href="tel:+136745677554"]::before {
@@ -869,26 +877,7 @@ a[href="tel:+136745677554"]::before {
     }
 }
 
-@media (max-width: 860px) {
-
-    .carousel {
-        position: relative;
-        justify-content: center;
-    }
-
-    .carousel__cards {
-        gap: 40px
-    }
-
-    .carousel__cards .pets__card:last-child {
-        display: none;
-    }
-
-
-}
-
 @media (max-width: 768px) {
-
     .about {
         padding-top: 66px;
     }
@@ -916,15 +905,6 @@ a[href="tel:+136745677554"]::before {
         margin-top: 59px;
     }
 
-    .donation-wrapper {
-        gap: 53px;
-    }
-
-    .donation__banking {
-        padding-top: 10px;
-        height: 45px;
-    }
-
     .help__list {
         width: 630px;
         column-gap: 60px;
@@ -943,10 +923,16 @@ a[href="tel:+136745677554"]::before {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        gap: 53px;
     }
 
     .donation-content {
         order: -1;
+    }
+
+    .donation__banking {
+        padding-top: 10px;
+        height: 45px;
     }
 
     .pets-catalog {
@@ -983,7 +969,6 @@ a[href="tel:+136745677554"]::before {
         height: 2px;
         background-color: #f1cdb3;
         transition: all 0.3s ease-in-out;
-
     }
 
     .pets-burger-line {
@@ -1012,7 +997,6 @@ a[href="tel:+136745677554"]::before {
 
     .burger_opened {
         transform: rotate(-90deg);
-
     }
 
     .burger_opened .pets-burger-line {
@@ -1044,17 +1028,12 @@ a[href="tel:+136745677554"]::before {
         order: -1;
         justify-content: center;
     }
-
 }
 
 @media (max-width: 640px) {
 
     .header-wrapper {
         padding: 0 10px;
-    }
-
-    .carousel__cards .pets__card:not(:first-child) {
-        display: none;
     }
 
     .help {
@@ -1096,7 +1075,6 @@ a[href="tel:+136745677554"]::before {
     .heading {
         text-align: center;
     }
-
 
     .footer-wrapper {
         flex-direction: column;
@@ -1148,7 +1126,6 @@ a[href="tel:+136745677554"]::before {
         top: 9px;
     }
 
-
     .footer__image-wrapper {
         margin-top: 45px;
     }
@@ -1159,7 +1136,6 @@ a[href="tel:+136745677554"]::before {
 }
 
 @media (max-width: 320px) {
-
     .heading_L {
         font-size: 25px;
         letter-spacing: 0.06em;
@@ -1241,10 +1217,6 @@ a[href="tel:+136745677554"]::before {
 
     .pets__heading {
         margin-bottom: 42px;
-    }
-
-    .carousel__cards .pets__card:not(:first-child) {
-        display: none;
     }
 
     .carousel__control {
