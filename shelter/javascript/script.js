@@ -209,23 +209,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Function for updating pagination buttons state
+    // Function for updating disabled state for pagination buttons
     function updatePaginationButtonsState () {
-        if (currentPageNumber === 1) {
-            paginationFirst.classList.add('button_small_disabled');
-            paginationPrev.classList.add('button_small_disabled');
-        }
-        else {
-            paginationFirst.classList.remove('button_small_disabled');
-            paginationPrev.classList.remove('button_small_disabled');
-        }
-        if (currentPageNumber === totalPages) {
-            paginationLast.classList.add('button_small_disabled');
-            paginationNext.classList.add('button_small_disabled');
-        } else {
-            paginationLast.classList.remove('button_small_disabled');
-            paginationNext.classList.remove('button_small_disabled');
-        }
+        const isFirstPage = currentPageNumber === 1;
+        const isLastPage = currentPageNumber === totalPages;
+        paginationFirst.classList.toggle('button_small_disabled', isFirstPage);
+        paginationPrev.classList.toggle('button_small_disabled', isFirstPage);
+        paginationLast.classList.toggle('button_small_disabled', isLastPage);
+        paginationNext.classList.toggle('button_small_disabled', isLastPage);
     }
 
     function renderCurrentPage () {
