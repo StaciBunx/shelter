@@ -809,11 +809,28 @@ a[href="tel:+136745677554"]::before {
 }
 
 .modal-container {
+    position: relative;
     display: flex;
     border-radius: 9px;
     width: 630px;
     background-color: var(--color-background-modal);
 }
+
+.modal-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -42px;
+    top: -52px;
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+}
+
 
 .modal-content {
     padding: 9px 10px 37px 11px;
