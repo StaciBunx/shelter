@@ -798,7 +798,7 @@ a[href="tel:+136745677554"]::before {
 /* Modal window */
 
 .modal {
-    display: grid;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -806,6 +806,10 @@ a[href="tel:+136745677554"]::before {
     left: 0;
     z-index: 10;
     place-content: center;
+}
+
+.modal_opened {
+    display: grid;
 }
 
 .modal-container {
@@ -831,6 +835,9 @@ a[href="tel:+136745677554"]::before {
     cursor: pointer;
 }
 
+.modal-close:hover path {
+    fill: var(--color-primary-light)
+}
 
 .modal-content {
     padding: 9px 10px 37px 11px;
