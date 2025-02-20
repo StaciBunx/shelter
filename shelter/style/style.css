@@ -44,6 +44,7 @@
     --color-primary-light: #fddcc4;
     --color-text: #4c4c4c;
     --color-background: #f6f6f6;
+    --color-background-modal: #fafafa;
     --font-family-primary: "Georgia", serif;
     --font-family-secondary: "Arial", sans-serif;
 }
@@ -792,6 +793,71 @@ a[href="tel:+136745677554"]::before {
     width: 30px;
     height: 23px;
     margin-right: 15px;
+}
+
+/* Modal window */
+
+.modal {
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    place-content: center;
+}
+
+.modal-container {
+    display: flex;
+    border-radius: 9px;
+    width: 630px;
+    background-color: var(--color-background-modal);
+}
+
+.modal-content {
+    padding: 9px 10px 37px 11px;
+}
+
+.modal__image {
+    width: 349px;
+    height: 350px;
+    border-radius: 9px 0 0 9px;
+}
+
+.modal__heading {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.modal__subheading {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.modal__text {
+    color: #000000;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.modal__list {
+    margin-top: 20px;
+}
+
+.modal__list-item {
+    font-family: var(--font-family-primary);
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.modal__list-item:not(:last-child) {
+    margin-bottom: 5px;
 }
 
 @media (max-width: 960px) {
