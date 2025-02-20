@@ -18,11 +18,11 @@ let cardsPerPage = 0;
 // Function for calculation count of cards per page size
 function getCountCardsForCatalog () {
     if (window.innerWidth <= 320) {
-        return 3;
+        return 16;
     } else if (window.innerWidth <= 768) {
-        return 6;
-    } else {
         return 8;
+    } else {
+        return 6;
     }
 }
 
