@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (document.querySelector('.catalog-page')) {
-        initCatalog();
+        initCatalog().then(() => {
+            initModalWindow();
+        });
     }
 
 });
