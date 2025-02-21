@@ -1,15 +1,21 @@
 // DOM elements
 const modalWindow = document.querySelector('.modal');
 const cardsContainer = document.querySelector('.cards-container');
+const overlay = document.querySelector('#overlay');
+const body = document.querySelector('.page__body');
 
 
 
 function openModal () {
     modalWindow.classList.add('modal_opened');
+    overlay.classList.toggle('overlay_active');
+    body.classList.toggle('no-scroll');
 }
 
 function closeModal () {
     modalWindow.classList.remove('modal_opened');
+    overlay.classList.remove('overlay_active');
+    body.classList.remove('no-scroll');
 }
 
 export function initModalWindow () {
