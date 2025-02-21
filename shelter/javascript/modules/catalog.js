@@ -1,4 +1,4 @@
-import { fetchPetsData, shuffleArray, renderPetCard } from '../modules/common.js';
+import { fetchPetsData, shuffleArray, renderPetCard } from './pet-cards.js';
 
 // DOM elements
 const catalogContainer = document.querySelector('.pets__cards');
@@ -18,11 +18,11 @@ let cardsPerPage = 0;
 // Function for calculation count of cards per page size
 function getCountCardsForCatalog () {
     if (window.innerWidth <= 320) {
-        return 3;
+        return 8;
     } else if (window.innerWidth <= 768) {
         return 6;
     } else {
-        return 8;
+        return 3;
     }
 }
 
