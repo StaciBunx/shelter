@@ -1,4 +1,4 @@
-import { fetchPetsData, shuffleArray, renderPetCard } from '../modules/common.js';
+import { fetchPetsData, shuffleArray, renderPetCard } from './pet-cards.js';
 
 // DOM elements
 const catalogContainer = document.querySelector('.pets__cards');
