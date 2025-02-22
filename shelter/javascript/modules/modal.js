@@ -4,8 +4,6 @@ const cardsContainer = document.querySelector('.cards-container');
 const overlay = document.querySelector('#overlay');
 const body = document.querySelector('.page__body');
 
-
-
 function openModal () {
     modalWindow.classList.add('modal_opened');
     overlay.classList.toggle('overlay_active');
@@ -20,7 +18,6 @@ function closeModal () {
 
 export function initModalWindow () {
     const modalWindowCloseBtn = document.querySelector('.modal-close');
-
 
     if (modalWindow && modalWindowCloseBtn && cardsContainer) {
         modalWindowCloseBtn.addEventListener('click', closeModal);
