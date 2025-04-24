@@ -25,8 +25,8 @@ function openModal () {
     document.body.style.paddingRight = `${scrollbarWidth}px`;
 
     modalWindow.classList.add('modal_opened');
-    overlay.classList.toggle('overlay_active');
-    body.classList.toggle('no-scroll');
+    overlay.classList.add('overlay_active');
+    body.classList.add('no-scroll');
 }
 
 function closeModal () {
@@ -41,16 +41,25 @@ function closeModal () {
 export function initModalWindow () {
     const modalWindowCloseBtn = document.querySelector('.modal-close');
 
-    if (modalWindow && modalWindowCloseBtn && cardsContainer) {
-        modalWindowCloseBtn.addEventListener('click', closeModal);
+    if (modalWindow && modalWindowCloseBtn && cardsContainer && overlay) {
+
         cardsContainer.addEventListener('click', function (e) {
             if (e.target.classList.contains('pets__card__button')) {
                 e.preventDefault();
                 openModal();
             }
         });
+
+        modalWindowCloseBtn.addEventListener('click', closeModal);
+
+        overlay.addEventListener('click', closeModal);
+
+        modalWindow.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
     }
+
     else {
-        console.error('Один из элементов не найден в DOM:', { modalWindow, modalWindowCloseBtn, cardsContainer });
+        console.error('Один из элементов не найден в DOM:', { modalWindow, modalWindowCloseBtn, cardsContainer, overlay });
     }
 }
