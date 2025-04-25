@@ -1,16 +1,22 @@
 import { showOverlay, hideOverlay } from "./_overlay.js";
 
+//Dom elements
+const burgerMenu = document.querySelector('#burgerMenu');
+const menu = document.querySelector('.navigation__list');
+
 // Burger-menu control
 export function initBurgerMenu () {
-    const burgerMenu = document.querySelector('#burgerMenu');
-    const menu = document.querySelector('.navigation__list');
 
     if (burgerMenu && menu) {
         // Open/close by click on icon
         burgerMenu.addEventListener('click', function () {
+            if (burgerMenu.classList.contains('burger_opened')) {
+                hideOverlay();
+            } else {
+                showOverlay();
+            }
             burgerMenu.classList.toggle('burger_opened');
             menu.classList.toggle('navigation__list_opened');
-            showOverlay();
         });
 
         // Close menu by click on overlay
