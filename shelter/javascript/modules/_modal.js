@@ -43,7 +43,6 @@ function closeModal () {
 export function initModalWindow () {
 
     if (modalWindow && modalWindowCloseBtn && modalContainer && cardsContainer && overlay) {
-
         cardsContainer.addEventListener('click', function (e) {
             if (e.target.classList.contains('pets__card__button')) {
                 e.preventDefault();
