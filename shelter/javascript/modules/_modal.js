@@ -1,4 +1,4 @@
-import { showOverlay, hideOverlay } from "./_overlay";
+import { showOverlay, hideOverlay } from "./_overlay.js";
 
 // DOM elements
 const modalWindow = document.querySelector('.modal');
