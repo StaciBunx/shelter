@@ -9,5 +9,6 @@ export async function fetchPetsData () {
         return data;
     } catch (error) {
         console.error('Ошибка: ', error);
+        throw error;
     }
 }
