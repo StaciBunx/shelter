@@ -25,6 +25,7 @@ export function initModalWindow () {
                 e.preventDefault();
                 openModal();
             }
+            openModal();
         });
 
         //Clode modal by click on X-button
