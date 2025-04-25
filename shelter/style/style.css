@@ -810,7 +810,6 @@ a[href="tel:+136745677554"]::before {
     z-index: 10;
     place-content: center;
     pointer-events: none;
-
 }
 
 .modal_opened {
@@ -823,6 +822,7 @@ a[href="tel:+136745677554"]::before {
     border-radius: 9px;
     width: 630px;
     background-color: var(--color-background-modal);
+    pointer-events: auto;
 }
 
 .modal-close {
@@ -838,7 +838,6 @@ a[href="tel:+136745677554"]::before {
     border-radius: 100%;
     border: 2px solid var(--color-primary);
     cursor: pointer;
-    pointer-events: auto;
 
 }
 

@@ -1,5 +1,7 @@
 // DOM elements
 const modalWindow = document.querySelector('.modal');
+const modalContainer = document.querySelector('.modal-container');
+const modalWindowCloseBtn = document.querySelector('.modal-close');
 const cardsContainer = document.querySelector('.cards-container');
 const overlay = document.querySelector('#overlay');
 const body = document.querySelector('.page__body');
@@ -39,9 +41,8 @@ function closeModal () {
 }
 
 export function initModalWindow () {
-    const modalWindowCloseBtn = document.querySelector('.modal-close');
 
-    if (modalWindow && modalWindowCloseBtn && cardsContainer && overlay) {
+    if (modalWindow && modalWindowCloseBtn && modalContainer && cardsContainer && overlay) {
 
         cardsContainer.addEventListener('click', function (e) {
             if (e.target.classList.contains('pets__card__button')) {
@@ -51,15 +52,14 @@ export function initModalWindow () {
         });
 
         modalWindowCloseBtn.addEventListener('click', closeModal);
-
         overlay.addEventListener('click', closeModal);
 
-        modalWindow.addEventListener('click', function (e) {
+        modalContainer.addEventListener('click', (e) => {
             e.stopPropagation();
         });
     }
 
     else {
-        console.error('Один из элементов не найден в DOM:', { modalWindow, modalWindowCloseBtn, cardsContainer, overlay });
+        console.error('Один из элементов не найден в DOM:', { modalWindow, modalWindowCloseBtn, cardsContainer, overlay, modalContainer });
     }
 }
