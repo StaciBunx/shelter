@@ -35,4 +35,7 @@ export function initBurgerMenu () {
             }
         });
     }
+    else {
+        console.error('Один из элементов не найден в DOM:', { burgerMenu, menu });
+    }
 }
