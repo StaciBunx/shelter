@@ -49,16 +49,13 @@ function renderModal (container, pet) {
 }
 
 export async function initModalWindow () {
-
     if (modalWindow && cardsContainer) {
-        const modalWindowCloseBtn = document.querySelector('.modal-close');
+        let currentCloseHandler = null;
 
-        //Open modal by click on cards' button
         cardsContainer.addEventListener('click', async (e) => {
             if (e.target.classList.contains('pets__card__button')) {
                 e.preventDefault();
                 const card = e.target.closest('.pets__card');
-
                 const petName = card.querySelector('.pets__name').textContent;
                 const petsData = await fetchPetsData();
 
@@ -68,20 +65,30 @@ export async function initModalWindow () {
                     return;
                 }
 
-                renderModal(modalWindow, pet);
+                modalContainer.innerHTML = '';
+                renderModal(modalContainer, pet);
                 openModal();
+
+                const modalWindowCloseBtn = document.querySelector('.modal-close');
+                if (currentCloseHandler) {
+                    modalWindowCloseBtn.removeEventListener('click', currentCloseHandler);
+                }
+                currentCloseHandler = closeModal;
+                modalWindowCloseBtn.addEventListener('click', currentCloseHandler);
             }
         });
-        //Clode modal by click on X-button
-        modalWindowCloseBtn.addEventListener('click', closeModal);
-        //Close modal by click on overlay
-        overlay.addEventListener('click', closeModal);
-        //Ignore close by click on modal
+
+        if (overlay) {
+            overlay.addEventListener('click', closeModal);
+        }
+
         modalContainer.addEventListener('click', (e) => {
             e.stopPropagation();
         });
-    }
-    else {
-        console.error('Один из элементов не найден в DOM:', { modalWindow, modalWindowCloseBtn, cardsContainer });
+    } else {
+        console.error('Один из элементов не найден в DOM:', {
+            modalWindow,
+            cardsContainer
+        });
     }
 }
