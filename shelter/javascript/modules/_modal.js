@@ -53,29 +53,28 @@ export async function initModalWindow () {
         let currentCloseHandler = null;
 
         cardsContainer.addEventListener('click', async (e) => {
-            if (e.target.classList.contains('pets__card__button')) {
-                e.preventDefault();
-                const card = e.target.closest('.pets__card');
-                const petName = card.querySelector('.pets__name').textContent;
-                const petsData = await fetchPetsData();
-
-                const pet = petsData.find(p => p.name === petName);
-                if (!pet) {
-                    console.error(`Питомец с именем "${petName}" не найден`);
-                    return;
-                }
-
-                modalContainer.innerHTML = '';
-                renderModal(modalContainer, pet);
-                openModal();
-
-                const modalWindowCloseBtn = document.querySelector('.modal-close');
-                if (currentCloseHandler) {
-                    modalWindowCloseBtn.removeEventListener('click', currentCloseHandler);
-                }
-                currentCloseHandler = closeModal;
-                modalWindowCloseBtn.addEventListener('click', currentCloseHandler);
+            const card = e.target.closest('.pets__card');
+            if (!card) return;
+            e.preventDefault();
+            const petName = card.querySelector('.pets__name').textContent;
+            const petsData = await fetchPetsData();
+            const pet = petsData.find(p => p.name === petName);
+            if (!pet) {
+                console.error(`Питомец с именем "${petName}" не найден`);
+                return;
             }
+
+            modalContainer.innerHTML = '';
+            renderModal(modalContainer, pet);
+            openModal();
+
+            const modalWindowCloseBtn = document.querySelector('.modal-close');
+            if (currentCloseHandler) {
+                modalWindowCloseBtn.removeEventListener('click', currentCloseHandler);
+            }
+
+            currentCloseHandler = closeModal;
+            modalWindowCloseBtn.addEventListener('click', currentCloseHandler);
         });
 
         if (overlay) {
