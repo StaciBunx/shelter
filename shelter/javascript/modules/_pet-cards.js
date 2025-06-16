@@ -11,12 +11,12 @@ export function shuffleArray (array) {
 export function renderPetCard (container, cards) {
     const fragment = document.createDocumentFragment();
 
-    cards.forEach(({ img, name, type }) => {
+    cards.forEach((pet) => {
         const card = document.createElement('article');
         card.classList.add('pets__card');
         card.innerHTML = `
-                    <img class="pets__image" src="${img}" alt="${name}, ${type}" width="270" height="270">
-                    <h4 class="heading heading_S">${name}</h4>
+                    <img class="pets__image" src="${pet.img}" alt="${pet.name}, ${pet.type}" width="270" height="270">
+                    <h4 class="heading heading_S pets__name">${pet.name}</h4>
                     <a class="button button_light pets__card__button" href="#">Learn more</a>
                 `;
         fragment.appendChild(card);
