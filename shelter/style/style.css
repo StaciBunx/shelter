@@ -824,7 +824,7 @@ a[href="tel:+136745677554"]::before {
     position: relative;
     display: flex;
     border-radius: 9px;
-    width: 630px;
+    width: 900px;
     background-color: var(--color-background-modal);
     pointer-events: auto;
 }
@@ -850,12 +850,12 @@ a[href="tel:+136745677554"]::before {
 }
 
 .modal-content {
-    padding: 9px 10px 37px 11px;
+    padding: 50px 20px 88px 29px;
 }
 
 .modal__image {
-    width: 349px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     border-radius: 9px 0 0 9px;
 }
 
@@ -866,19 +866,19 @@ a[href="tel:+136745677554"]::before {
 
 .modal__subheading {
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .modal__text {
     color: #000000;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 110%;
     letter-spacing: 0.06em;
 }
 
 .modal__list {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .modal__list-item {
