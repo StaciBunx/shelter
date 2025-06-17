@@ -879,6 +879,7 @@ a[href="tel:+136745677554"]::before {
 
 .modal__list {
     margin-top: 40px;
+    padding-left: 13px;
 }
 
 .modal__list-item {
@@ -888,6 +889,11 @@ a[href="tel:+136745677554"]::before {
     font-size: 15px;
     line-height: 110%;
     letter-spacing: 0.06em;
+    list-style-type: disc;
+}
+
+.modal__list-item::marker {
+    color: var(--color-primary);
 }
 
 .modal__list-item:not(:last-child) {
