@@ -590,6 +590,10 @@ a[href="tel:+136745677554"]::before {
     border-color: var(--color-primary-light);
 }
 
+.pets__image {
+    border-radius: 9px 9px 0 0;
+}
+
 /* Pets Catalog */
 
 .pets__cards {
