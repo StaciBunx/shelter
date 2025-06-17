@@ -38,7 +38,7 @@ function renderModal (container, pet) {
                 <p class="modal__subheading heading heading_S">${pet.type} - ${pet.breed}</p>
                 <p class="modal__text">${pet.description}</p>
                 <ul class="modal__list">
-                    <li class="modal__list-item"><b>Age:</b>${pet.age}</li>
+                    <li class="modal__list-item"><b>Age:</b> ${pet.age}</li>
                     <li class="modal__list-item"><b>Inoculations:</b> ${pet.inoculations.join(', ')}</li >
                     <li class="modal__list-item"><b>Diseases:</b> ${pet.diseases.join(', ')}</li>
                     <li class="modal__list-item"><b>Parasites:</b> ${pet.parasites.join(', ')}</li>
