@@ -850,7 +850,7 @@ a[href="tel:+136745677554"]::before {
 }
 
 .modal-content {
-    padding: 50px 20px 88px 29px;
+    padding: 50px 20px 0 29px;
 }
 
 .modal__image {
@@ -980,6 +980,27 @@ a[href="tel:+136745677554"]::before {
 
     .footer__image-wrapper {
         margin-top: 64px;
+    }
+
+    .modal-container {
+        width: 630px;
+    }
+
+    .modal__image {
+        width: 349px;
+        height: 350px;
+    }
+
+    .modal-content {
+        padding: 10px 9px 0 11px;
+    }
+
+    .modal__subheading {
+        margin-bottom: 20px;
+    }
+
+    .modal__list {
+        margin-top: 20px;
     }
 }
 

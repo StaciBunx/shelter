@@ -32,7 +32,7 @@ function renderModal (container, pet) {
                         fill="#292929" />
                 </svg>
             </button>
-            <img class="modal__image" src="${pet.img}" alt="${pet.name}, ${pet.type}" width="349" height="350">
+            <img class="modal__image" src="${pet.img}" alt="${pet.name}, ${pet.type}">
             <div class="modal-content">
                 <h3 class="modal__heading heading heading_M">${pet.name}</h3>
                 <p class="modal__subheading heading heading_S">${pet.type} - ${pet.breed}</p>
