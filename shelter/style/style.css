@@ -1155,6 +1155,32 @@ a[href="tel:+136745677554"]::before {
         order: -1;
         justify-content: center;
     }
+
+    .modal-container {
+        width: 240px;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .modal__heading,
+    .modal__subheading {
+        text-align: center;
+    }
+
+    .modal__text {
+        font-size: 13px;
+    }
+
+    .modal__list {
+        margin-top: 24px;
+    }
+
+
+    .modal__image {
+        display: none;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1260,6 +1286,7 @@ a[href="tel:+136745677554"]::before {
     .footer__image {
         max-height: 269px;
     }
+
 }
 
 @media (max-width: 320px) {
