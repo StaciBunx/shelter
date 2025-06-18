@@ -13,10 +13,10 @@
     <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <script src="./javascript/index.js" defer></script>
+    <script type="module" src="./javascript/script.js" defer></script>
 </head>
 
-<body class="page__body">
+<body class="page__body catalog-page">
 
     <header class="header header_color_white">
         <div class="header-wrapper center">
@@ -25,21 +25,31 @@
                 <p class="logo__subtitle logo__subtitle_dark">Shelter for pets in Boston</p>
             </a>
             <nav class="header__navigation">
+                <div class="burger-menu" id="burgerMenu">
+                    <div class="burger-line pets-burger-line"></div>
+                    <div class="burger-line pets-burger-line"></div>
+                    <div class="burger-line pets-burger-line"></div>
+                </div>
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a class="text" href="./index.html#about">About the
+
+                    <li class="navigation__item"><a class="text navigation__link navigation__link_dark"
+                            href="./index.html#about">About the
                             shelter</a></li>
-                    <li class="navigation__item"><a class="text navigation__link_current_dark">Our
+                    <li class="navigation__item"><a
+                            class="text navigation__link navigation__link_dark navigation__link_current">Our
                             pets</a>
                     </li>
-                    <li class="navigation__item"><a class="text navigation__link_normal_dark"
-                            href="./index.html#help">Help the
+                    <li class="navigation__item"><a class="text navigation__link navigation__link_dark"
+                            href="./index.html#help">Help
+                            the
                             shelter</a>
                     </li>
-                    <li class="navigation__item"><a class="text navigation__link_normal_dark"
+                    <li class="navigation__item"><a class="text navigation__link navigation__link_dark"
                             href="#footer">Contacts</a>
                     </li>
                 </ul>
             </nav>
+            <div class="overlay" id="overlay"></div>
         </div>
     </header>
     <main class="page__main">
@@ -47,59 +57,11 @@
         <section class="pets-catalog center">
             <h3 class="heading heading_M pets__heading">Our friends who<br>
                 are looking for a house</h3>
-            <div class="pets__cards">
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-katrine.jpg" alt="Gray-colored British cat"
-                        width="270" height="270">
-                    <h4 class="heading heading_S">Katrine</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-jennifer.jpg" alt="Cute white-colored puppy"
-                        width="270" height="270">
-                    <h4 class="heading heading_S">Jennifer</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-woody.jpg" alt="Golden retriever, adult dog"
-                        width="270" height="270">
-                    <h4 class="heading heading_S">Woody</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-sophia.jpg" alt="Small white and black puppy"
-                        width="270" height="270">
-                    <h4 class="heading heading_S">Sophia</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-timmy.jpg" alt="Gray cat" width="270"
-                        height="270">
-                    <h4 class="heading heading_S">Timmy</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-charly.jpg" alt="White and brown fur dog"
-                        width="270" height="270">
-                    <h4 class="heading heading_S">Charly</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-scarlet.jpg" alt="Young small dog" width="270"
-                        height="270">
-                    <h4 class="heading heading_S">Scarlett</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
-                <article class="pets__card">
-                    <img class="pets__image" src="./assets/images/pets-freddie.jpg" alt="Gray cat" width="270"
-                        height="270">
-                    <h4 class="heading heading_S">Freddie</h4>
-                    <a class="button button_light" href="#">Learn more</a>
-                </article>
+            <div class="pets__cards cards-container">
             </div>
             <div class="pets__pagination">
                 <ul class="pagination__list">
-                    <li class="pagination__item button_small button_small_disabled">
+                    <li class="pagination__item pagination__first button_small">
                         <svg aria-hidden="true" focusable="false" width="25" height="11" viewBox="0 0 25 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -107,7 +69,7 @@
                                 fill="#292929" />
                         </svg>
                     </li>
-                    <li class="pagination__item button_small button_small_disabled">
+                    <li class="pagination__item pagination__prev button_small">
                         <svg aria-hidden="true" focusable="false" width="10" height="11" viewBox="0 0 10 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -115,8 +77,8 @@
                                 fill="#292929" />
                         </svg>
                     </li>
-                    <li class="pagination__item button_small button_small_current">1</li>
-                    <li class="pagination__item button_small">
+                    <li class="pagination__item pagination__current button_small button_small_current">1</li>
+                    <li class="pagination__item pagination__next button_small">
                         <svg aria-hidden="true" focusable="false" width="10" height="11" viewBox="0 0 10 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -124,7 +86,7 @@
                                 fill="#292929" />
                         </svg>
                     </li>
-                    <li class="pagination__item button_small">
+                    <li class="pagination__item pagination__last button_small">
                         <svg aria-hidden="true" focusable="false" width="25" height="11" viewBox="0 0 25 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -138,26 +100,58 @@
     </main>
     <footer class="footer" id="footer">
         <div class="footer-wrapper center">
-            <div class="footer__contacts">
-                <h3 class="heading heading_M footer__heading">For questions and suggestions
-                </h3>
-                <a class="heading heading_S footer__text" href="mailto:email@shelter.com">email@shelter.com</a>
-                <a class="heading heading_S footer__text" href="tel:+136745677554">+13 674 567 75 54</a>
+            <div class="footer-content">
+                <div class="footer__contacts">
+                    <h3 class="heading heading_M footer__heading">For questions and suggestions
+                    </h3>
+                    <a class="heading heading_S footer__text" href="mailto:email@shelter.com">email@shelter.com</a>
+                    <a class="heading heading_S footer__text" href="tel:+136745677554">+13 674 567 75 54</a>
+                </div>
+                <div class="footer__address">
+                    <h3 class="heading heading_M footer__heading">We are waiting for your&nbsp;visit</h3>
+                    <address>
+                        <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/BA27LbRfkbuWMpcS7"
+                            target="_blank">1
+                            Central Street, Boston (entrance from the store)</a>
+                    </address>
+                    <address>
+                        <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/k959TMkYaxmAAgZH8"
+                            target="_blank">18 South Park, London</a>
+                    </address>
+                </div>
             </div>
-            <div class="footer__address">
-                <h3 class="heading heading_M footer__heading">We are waiting for your visit</h3>
-                <address>
-                    <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/BA27LbRfkbuWMpcS7"
-                        target="_blank">1
-                        Central Street, Boston (entrance from the store)</a>
-                </address>
-                <address>
-                    <a class="heading heading_S footer__text" href="https://maps.app.goo.gl/k959TMkYaxmAAgZH8"
-                        target="_blank">18 South Park, London</a>
-                </address>
+            <div class="footer__image-wrapper">
+                <img class="footer__image" src="../shelter/assets/background/footer-puppy.png" alt="">
             </div>
         </div>
     </footer>
+    <section class="modal">
+        <div class="modal-container">
+            <button class="modal-close" type="button">
+                <span class="visually-hidden">Закрыть окно</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" focusable="false">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z"
+                        fill="#292929" />
+                </svg>
+            </button>
+            <img class="modal__image" src="./assets/images/pets-jennifer.jpg" alt="" width="349" height="350">
+            <div class="modal-content">
+                <h3 class="modal__heading heading heading_M">Jennifer</h3>
+                <p class="modal__subheading heading heading_S">Dog - Labrador</p>
+                <p class="modal__text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to
+                    find a new forever home. This girl really enjoys being able to go outside to run and play, but
+                    won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                <ul class="modal__list">
+                    <li class="modal__list-item"><b>Age:</b> 2 months</li>
+                    <li class="modal__list-item"><b>Inoculations:</b> none</li>
+                    <li class="modal__list-item"><b>Diseases:</b> none</li>
+                    <li class="modal__list-item"><b>Parasites:</b> none</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
