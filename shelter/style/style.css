@@ -109,6 +109,7 @@ img {
 }
 
 .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -119,9 +120,11 @@ img {
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 9;
+    pointer-events: auto;
 }
 
 .overlay_active {
+    display: block;
     visibility: visible;
     opacity: 1;
 }
@@ -587,6 +590,10 @@ a[href="tel:+136745677554"]::before {
     border-color: var(--color-primary-light);
 }
 
+.pets__image {
+    border-radius: 9px 9px 0 0;
+}
+
 /* Pets Catalog */
 
 .pets__cards {
@@ -806,6 +813,7 @@ a[href="tel:+136745677554"]::before {
     left: 0;
     z-index: 10;
     place-content: center;
+    pointer-events: none;
 }
 
 .modal_opened {
@@ -816,8 +824,9 @@ a[href="tel:+136745677554"]::before {
     position: relative;
     display: flex;
     border-radius: 9px;
-    width: 630px;
+    width: 900px;
     background-color: var(--color-background-modal);
+    pointer-events: auto;
 }
 
 .modal-close {
@@ -833,6 +842,7 @@ a[href="tel:+136745677554"]::before {
     border-radius: 100%;
     border: 2px solid var(--color-primary);
     cursor: pointer;
+
 }
 
 .modal-close:hover path {
@@ -840,12 +850,12 @@ a[href="tel:+136745677554"]::before {
 }
 
 .modal-content {
-    padding: 9px 10px 37px 11px;
+    padding: 50px 20px 0 29px;
 }
 
 .modal__image {
-    width: 349px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     border-radius: 9px 0 0 9px;
 }
 
@@ -856,19 +866,20 @@ a[href="tel:+136745677554"]::before {
 
 .modal__subheading {
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .modal__text {
     color: #000000;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 110%;
     letter-spacing: 0.06em;
 }
 
 .modal__list {
-    margin-top: 20px;
+    margin-top: 40px;
+    padding-left: 13px;
 }
 
 .modal__list-item {
@@ -878,6 +889,11 @@ a[href="tel:+136745677554"]::before {
     font-size: 15px;
     line-height: 110%;
     letter-spacing: 0.06em;
+    list-style-type: disc;
+}
+
+.modal__list-item::marker {
+    color: var(--color-primary);
 }
 
 .modal__list-item:not(:last-child) {
@@ -964,6 +980,27 @@ a[href="tel:+136745677554"]::before {
 
     .footer__image-wrapper {
         margin-top: 64px;
+    }
+
+    .modal-container {
+        width: 630px;
+    }
+
+    .modal__image {
+        width: 349px;
+        height: 350px;
+    }
+
+    .modal-content {
+        padding: 10px 9px 0 11px;
+    }
+
+    .modal__subheading {
+        margin-bottom: 20px;
+    }
+
+    .modal__list {
+        margin-top: 20px;
     }
 }
 
@@ -1118,6 +1155,32 @@ a[href="tel:+136745677554"]::before {
         order: -1;
         justify-content: center;
     }
+
+    .modal-container {
+        width: 240px;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .modal__heading,
+    .modal__subheading {
+        text-align: center;
+    }
+
+    .modal__text {
+        font-size: 13px;
+    }
+
+    .modal__list {
+        margin-top: 24px;
+    }
+
+
+    .modal__image {
+        display: none;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1223,6 +1286,7 @@ a[href="tel:+136745677554"]::before {
     .footer__image {
         max-height: 269px;
     }
+
 }
 
 @media (max-width: 320px) {

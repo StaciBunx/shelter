@@ -1,7 +1,7 @@
-import { initBurgerMenu } from './modules/burger.js';
-import { initCarousel } from './modules/home.js';
-import { initCatalog } from './modules/catalog.js';
-import { initModalWindow } from './modules/modal.js';
+import { initBurgerMenu } from './modules/_burger.js';
+import { initCarousel } from './modules/_index.js';
+import { initCatalog } from './modules/_catalog.js';
+import { initModalWindow } from './modules/_modal.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     initBurgerMenu();
@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (document.querySelector('.catalog-page')) {
-        initCatalog();
+        initCatalog().then(() => {
+            initModalWindow();
+        });
     }
 
 });

@@ -1,4 +1,6 @@
-import { fetchPetsData, shuffleArray, renderPetCard } from './pet-cards.js';
+import { shuffleArray, renderPetCard } from './_pet-cards.js';
+import { fetchPetsData } from './_api.js';
+
 
 // DOM elements
 const carouselContainer = document.querySelector('.carousel__cards');
